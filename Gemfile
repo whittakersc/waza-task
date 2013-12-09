@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'devise'
+
 group :test, :development do
   gem 'rspec-rails'
   gem 'cucumber-rails', require: false

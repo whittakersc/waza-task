@@ -9,5 +9,5 @@ Scenario:
 Given I am on the homepage
 And I follow "Add team"
 And I fill in the team form correctly
-And I follow "Create team"
-Then I should see ""
+And I press "Create Team"
+Then I should see "The team"
