@@ -1,0 +1,48 @@
+<%= form_for ([@team, @task]) do |f| %>
+
+<% if @task.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@task.errors.count, "error") %> prohibited
+      this review from being saved:</h2>
+    <ul>
+    <% @task.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<h1> Add your task: </h1>
+
+<p>
+<%= f.label :description %><br>
+<%= f.text_area :description %>
+</p>
+
+<p>
+<%= options_from_collection_for_select(@team.users.all, :id, :name) %>
+<%= f.label :owner %><br>
+<%= collection_select(:task, :owner, @team.users.all, :id, :name) %>
+</p>
+
+<p>
+<%= f.label :due_date %><br>
+<%= select_date Date.today, prefix: :start_date %>
+
+</p>
+
+<p>
+<%= f.label :actual_hrs %><br>
+<%= f.text_field :actual_hrs %>
+</p>
+
+<p>
+<%= options_for_select(['To Do', 'In-Progress', 'Complete']) %>
+<%= f.label :status %><br>
+<%= select_tag(:status, options_for_select(['To Do', 'In-Progress', 'Complete'])) %>
+</p>
+
+
+<%= f.submit %>
+
+<% end %>
