@@ -44,8 +44,9 @@
 </p>
 
 <p>
+<%= options_for_select(['Profit and Loss', 'Balance Sheet', 'Regulatory', 'Cash Flow']) %>
 <%= f.label :report_tag %><br>
-<%= f.text_field :report_tag %>
+<%= f.select :report_tag, options_for_select(['Profit and Loss', 'Balance Sheet', 'Regulatory', 'Cash Flow']) %>
 </p>
 
 <p>
@@ -56,8 +57,9 @@
 <% else %>
 <%= f.hidden_field :type, value: 'Project' %>
 <p
-<%= f.label :requested_by %><br>
-<%= f.text_field :requested_by %>
+%= options_for_select(['Manager', 'Division', 'Customer']) %>
+<%= f.label :status %><br>
+<%= f.select :status, options_for_select(['Manager', 'Division', 'Customer']) %>
 </p>
 
 <% end %>

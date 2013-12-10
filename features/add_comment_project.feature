@@ -10,7 +10,7 @@ Given a project task has already been added
 Scenario: Add to Project task
 Given I am on the homepage
 And I follow "Team Details"
-And I follow "Add comment"
+And I follow "Add Comment"
 And I fill in "Description" with "Yoyo"
 And I press "Create comment"
 Then I should see ""

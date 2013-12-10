@@ -5,10 +5,13 @@ TMApp::Application.routes.draw do
   root "teams#index"
 
   resources :teams do
-    resources :tasks do
-      resources :comments, only: [:new, :create, :destroy]
-    end
+    resources :tasks
   end
+
+  resources :tasks do
+    resources :comments, only: [:new, :create, :destroy]
+  end
+ 
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -10,7 +10,7 @@ Given a BAU task has already been added
 Scenario: Add to BAU task
 Given I am on the homepage
 And I follow "Team Details"
-And I follow "Add comment"
+And I follow "Add Comment"
 And I fill in "Description" with "Ahoy"
 And I press "Create comment"
 Then I should see ""
