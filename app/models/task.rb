@@ -1,8 +1,9 @@
 class Task < ActiveRecord::Base
 
   belongs_to :team
+  has_many :comments
 
-  def self.select_options
+  def self.select_options(child)
     [["Bau","Bau"],["Project","Project"]]
   end
 

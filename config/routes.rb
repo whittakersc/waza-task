@@ -5,7 +5,9 @@ TMApp::Application.routes.draw do
   root "teams#index"
 
   resources :teams do
-    resources :tasks
+    resources :tasks do
+      resources :comments, only: [:new, :create, :destroy]
+    end
   end
   
   # The priority is based upon order of creation: first created -> highest priority.

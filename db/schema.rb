@@ -11,24 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131210072018) do
+ActiveRecord::Schema.define(version: 20131210144858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "baus", force: true do |t|
-    t.datetime "time_due"
-    t.string   "report_tag"
-    t.integer  "expected_hrs"
+  create_table "comments", force: true do |t|
+    t.string   "description"
+    t.integer  "user_id"
+    t.integer  "task_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "projects", force: true do |t|
-    t.string   "requested_by"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "comments", ["task_id"], name: "index_comments_on_task_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "tasks", force: true do |t|
     t.string   "description"
@@ -40,6 +37,10 @@ ActiveRecord::Schema.define(version: 20131210072018) do
     t.datetime "updated_at"
     t.string   "team_id"
     t.string   "type"
+    t.string   "time"
+    t.string   "report_tag"
+    t.string   "expected_hrs"
+    t.string   "requested_by"
   end
 
   create_table "teams", force: true do |t|

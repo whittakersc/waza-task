@@ -4,6 +4,7 @@
 <br>
 
 <% @teams.each do |team| %>
+
 Name: <%= team.name %><%= link_to 'Team Details', team_path(team) %>
 <br>
 Division: <%= team.division %>

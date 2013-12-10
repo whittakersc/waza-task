@@ -1,5 +1,6 @@
 <%= link_to 'Edit Details', edit_team_path(@team) %>
-<%= link_to 'Add task', new_team_task_path(@team) %>
+<%= link_to 'Add BAU', new_team_task_path(@team, type: "Bau") %>
+<%= link_to 'Add Project', new_team_task_path(@team) %>
 
 <h2> The team: </h2>
 
@@ -8,10 +9,23 @@ Name: <%= @team.name %>
 Division <%= @team.division %>
 
 <br>
-Team members:
+<h2> Team members: </h2>
 <br>
 <% @team.users.each do |user| %>
 Name: <%= user.name %>
 <br>
 
 <% end %>
+
+<h2> Tasks for the team: </h2>
+<br>
+<% @team.tasks.each do |task| %>
+Description: <%= task.description %>
+<br>
+Type: <%= task.type %>
+<br>
+<%= link_to 'Add Comment', new_team_task_comment_path %>
+
+<%end%>
+
+

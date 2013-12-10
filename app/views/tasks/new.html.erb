@@ -31,22 +31,36 @@
 </p>
 
 <p>
-<%= options_for_select(Task.select_options) %>
-<%= f.label :type %><br>
-<%= f.select :type, options_for_select(Task.select_options) %>
-</p>
-
-<p>
-<%= f.label :actual_hrs %><br>
-<%= f.text_field :actual_hrs %>
-</p>
-
-<p>
 <%= options_for_select(['To Do', 'In-Progress', 'Complete']) %>
 <%= f.label :status %><br>
 <%= f.select :status, options_for_select(['To Do', 'In-Progress', 'Complete']) %>
 </p>
 
+<% if @task.type == "Bau" %>
+<%= f.hidden_field :type, value: 'Bau' %>
+<p>
+<%= f.label :time %><br>
+<%= f.text_field :time %>
+</p>
+
+<p>
+<%= f.label :report_tag %><br>
+<%= f.text_field :report_tag %>
+</p>
+
+<p>
+<%= f.label :expected_hrs %><br>
+<%= f.text_field :expected_hrs %>
+</p>
+
+<% else %>
+<%= f.hidden_field :type, value: 'Project' %>
+<p
+<%= f.label :requested_by %><br>
+<%= f.text_field :requested_by %>
+</p>
+
+<% end %>
 
 <%= f.submit %>
 
