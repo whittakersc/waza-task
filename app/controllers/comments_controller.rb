@@ -11,4 +11,5 @@ class CommentsController < ApplicationController
   	@team = @task.team_id
   	redirect_to team_path(@team)
   end
+  
 end
