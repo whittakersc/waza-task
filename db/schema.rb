@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131209181904) do
+ActiveRecord::Schema.define(version: 20131210072018) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "baus", force: true do |t|
+    t.datetime "time_due"
+    t.string   "report_tag"
+    t.integer  "expected_hrs"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", force: true do |t|
+    t.string   "requested_by"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tasks", force: true do |t|
     t.string   "description"
@@ -25,6 +39,7 @@ ActiveRecord::Schema.define(version: 20131209181904) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "team_id"
+    t.string   "type"
   end
 
   create_table "teams", force: true do |t|

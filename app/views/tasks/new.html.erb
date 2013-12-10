@@ -27,8 +27,13 @@
 
 <p>
 <%= f.label :due_date %><br>
-<%= select_date Date.today, prefix: :start_date %>
+<%= f.date_select :due_date %>
+</p>
 
+<p>
+<%= options_for_select(Task.select_options) %>
+<%= f.label :type %><br>
+<%= f.select :type, options_for_select(Task.select_options) %>
 </p>
 
 <p>
@@ -39,7 +44,7 @@
 <p>
 <%= options_for_select(['To Do', 'In-Progress', 'Complete']) %>
 <%= f.label :status %><br>
-<%= select_tag(:status, options_for_select(['To Do', 'In-Progress', 'Complete'])) %>
+<%= f.select :status, options_for_select(['To Do', 'In-Progress', 'Complete']) %>
 </p>
 
 

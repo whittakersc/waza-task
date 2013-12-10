@@ -1,0 +1,3 @@
+class Bau < Task
+	
+end

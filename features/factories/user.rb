@@ -5,5 +5,6 @@ FactoryGirl.define do
           password_confirmation "qwertyuii"
           job_title "Analyst"
           name 'Andrew'
+          team
   end
 end
