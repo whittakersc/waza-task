@@ -1,0 +1,35 @@
+
+<%= @team.name %>
+
+<div class="bau_current" style="color: blue;">
+<% @tasks_bau_current_month.each do |task| %>
+  <%= task.description %>
+  <%= task.status %>
+  <%= task.requested_by %>
+	<% end %>
+</div>
+<br>
+<div class="bau_prior" style="color: red;">
+<% @tasks_bau_prior_month.each do |task| %>
+  <%= task.description %>
+  <%= task.status %>
+  <%= task.requested_by %>
+	<% end %>
+</div>
+<br>
+<div class="projects_current" style="color: green;">
+<% @tasks_project_current_month.each do |task| %>
+  <%= task.description %>
+  <%= task.status %>
+  <%= task.requested_by %>
+	<% end %>
+</div>
+<br>
+<div class="projects_prior">
+<% @tasks_project_prior_month.each do |task| %>
+  <%= task.description %>
+  <%= task.status %>
+  <%= task.requested_by %>
+	<% end %>
+</div>
+<br>

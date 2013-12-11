@@ -58,8 +58,8 @@
 <%= f.hidden_field :type, value: 'Project' %>
 <p
 %= options_for_select(['Manager', 'Division', 'Customer']) %>
-<%= f.label :status %><br>
-<%= f.select :status, options_for_select(['Manager', 'Division', 'Customer']) %>
+<%= f.label :requested_by %><br>
+<%= f.select :requested_by, options_for_select(['Manager', 'Division', 'Customer']) %>
 </p>
 
 <% end %>
