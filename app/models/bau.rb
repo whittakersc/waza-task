@@ -1,5 +1,7 @@
 class Bau < Task
 
+#to extract as now in Task
+
 	scope :current_month, -> {
 		where(due_date: (Time.now.beginning_of_month..Time.now.end_of_month))
 	}
@@ -19,5 +21,6 @@ class Bau < Task
 	scope :status_complete, -> {
 		where(status: 'Complete')
 	}
+
 	
 end

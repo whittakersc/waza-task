@@ -1,35 +1,144 @@
 
-<%= @team.name %>
+<div class="container">
 
-<div class="bau_current" style="color: blue;">
-<% @tasks_bau_current_month.each do |task| %>
-  <%= task.description %>
-  <%= task.status %>
-  <%= task.requested_by %>
-	<% end %>
+<h1> Dashboard CM </h1>
+<h3>Team: <%= @team.name %></h3>
+
+<div class="dashboard_current">
+  <p>Total number of Tasks this month: <%= @tasks_count_current %></p>
+  <p>Complete: <%= @tasks_complete_status_current_count %></p>
+  <p>In-Progress: <%= @tasks_in_progress_status_current_count %></p>
+  <p>To Do: <%= @tasks_to_do_status_current_count %></p>
+  <p>Number of BAU tasks this month: <%= @baus_count_current %></p>
+  <p>Complete: <%= @baus_complete_status_current_count %></p>
+  <p>In-Progress: <%= @baus_in_progress_status_current_count %></p>
+  <p>To Do: <%= @baus_to_do_status_current_count %></p>
+
+  <canvas id="myChart_bar" width="400" height="400"></canvas>
+
+  <canvas id="myChart_pie" width="400" height="400"></canvas>
+
+
+  <p>Number of Project tasks this month:<%= @projects_count_current %></p>
+  <p>Complete: <%= @projects_complete_status_current_count %></p>
+  <p>In-Progress: <%= @projects_in_progress_status_current_count %></p>
+  <p>To Do: <%= @projects_to_do_status_current_count %></p>
 </div>
-<br>
-<div class="bau_prior" style="color: red;">
-<% @tasks_bau_prior_month.each do |task| %>
-  <%= task.description %>
-  <%= task.status %>
-  <%= task.requested_by %>
-	<% end %>
+
+<h1> Dashboard PM </h1>
+<h3>Team: <%= @team.name %></h3>
+<div class="dashboard_previous">
+  <p>Total number of Tasks last month: <%= @tasks_count_previous %></p>
+  <p>Complete: <%= @tasks_complete_status_previous_count %></p>
+  <p>In-Progress: <%= @tasks_in_progress_status_previous_count %></p>
+  <p>To Do: <%= @tasks_to_do_status_previous_count %></p>
+  <p>Number of BAU tasks last month: <%= @baus_count_current %></p>
+  <p>Complete: <%= @baus_complete_status_previous_count %></p>
+  <p>In-Progress: <%= @baus_in_progress_status_previous_count %></p>
+  <p>To Do: <%= @baus_to_do_status_previous_count %></p>
+
+
+
+  <p>Number of Project tasks last month:<%= @projects_count_previous %></p>
+  <p>Complete: <%= @projects_complete_status_previous_count %></p>
+  <p>In-Progress: <%= @projects_in_progress_status_previous_count %></p>
+  <p>To Do: <%= @projects_to_do_status_previous_count %></p>
 </div>
-<br>
-<div class="projects_current" style="color: green;">
-<% @tasks_project_current_month.each do |task| %>
-  <%= task.description %>
-  <%= task.status %>
-  <%= task.requested_by %>
-	<% end %>
+
+<h1> BAU list CM </h1>
+<h3>Team: <%= @team.name %></h3>
+  <div class="bau_current" style="color: blue;">
+  <% @tasks_bau_current_month.each do |task| %>
+    <p>BAU description: <%= task.description %></p>
+    <p>BAU status: <%= task.status %></p>
+    <p>Due date: <%= task.due_date %></p>
+  	<% end %>
+  </div>
+
+<h1> BAU list PM </h1>
+<h3>Team: <%= @team.name %></h3>
+  <div class="bau_prior" style="color: red;">
+  <% @tasks_bau_prior_month.each do |task| %>
+    <p>BAU description: <%= task.description %></p>
+    <p>BAU status: <%= task.status %></p>
+    <p>Due date: <%= task.due_date %></p>
+  	<% end %>
+  </div>
 </div>
-<br>
-<div class="projects_prior">
-<% @tasks_project_prior_month.each do |task| %>
-  <%= task.description %>
-  <%= task.status %>
-  <%= task.requested_by %>
-	<% end %>
+
+<h1> Project list CM </h1>
+<h3>Team: <%= @team.name %></h3>
+  <div class="projects_current" style="color: green;">
+  <% @tasks_project_current_month.each do |task| %>
+    <p>Project description: <%= task.description %></p>
+    <p>Project status: <%= task.status %></p>
+    <p>Project date: <%= task.due_date %></p>
+    <p>Requested by: <%= task.requested_by %></p>
+  	<% end %>
+  </div>
+
+<h1> Project list PM </h1>
+<h3>Team: <%= @team.name %></h3>
+  <div class="projects_prior">
+  <% @tasks_project_prior_month.each do |task| %>
+    <p>Project description: <%= task.description %></p>
+    <p>Project status: <%= task.status %></p>
+    <p>Project date: <%= task.due_date %></p>
+    <p>Requested by: <%= task.requested_by %></p>
+  	<% end %>
+  </div>
+
 </div>
-<br>
+
+<script>
+
+var ctx = document.getElementById("myChart_bar").getContext("2d");
+
+var options = {}
+
+var data = {
+  labels : ["January","February","March","April","May","June","July"],
+  datasets : [
+    {
+      fillColor : "rgba(220,220,220,0.5)",
+      strokeColor : "rgba(220,220,220,1)",
+      pointColor : "rgba(220,220,220,1)",
+      pointStrokeColor : "#fff",
+      data : <%= @test %>
+    },
+    
+    {
+      fillColor : "rgba(151,187,205,0.5)",
+      strokeColor : "rgba(151,187,205,1)",
+      pointColor : "rgba(151,187,205,1)",
+      pointStrokeColor : "#fff",
+      data : [28,48,40,19,96,27,100]
+    }
+  ]
+}
+
+new Chart(ctx).Line(data,options);
+
+var ctx = document.getElementById("myChart_pie").getContext("2d");
+
+var options = {}
+
+var data = [
+  {
+    value: <%= @tasks_complete_status_current_count %>,
+    color:"#F38630"
+  },
+  {
+    value : <%= @tasks_in_progress_status_current_count %>,
+    color : "#E0E4CC"
+  },
+  {
+    value : <%= @tasks_to_do_status_current_count %>,
+    color : "#69D2E7"
+  }     
+]
+
+new Chart(ctx).Pie(data,options);
+
+</script>
+

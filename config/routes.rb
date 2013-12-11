@@ -4,6 +4,8 @@ TMApp::Application.routes.draw do
   
   root "teams#index"
 
+  resources :navigation, only: [:index]
+
   resources :teams do
     resources :tasks
   end

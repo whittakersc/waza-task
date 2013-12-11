@@ -1,3 +1,37 @@
 // Place all the styles related to the navigation controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+
+}
+.dashboard_current {
+	border: 1px solid blue;
+	max-width: 50%;
+}
+
+.dashboard_previous {
+	border: 1px solid purple;
+	max-width: 50%;
+}
+
+.bau_current {
+	border: 1px solid yellow;
+	max-width: 50%;
+}
+
+.bau_prior {
+	border: 1px solid green;
+	max-width: 50%;
+}
+
+
+.projects_current {
+	border: 1px solid yellow;
+	max-width: 50%;
+}
+
+.projects_prior {
+	border: 1px solid green;
+	max-width: 50%;
+}
