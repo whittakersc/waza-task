@@ -1,0 +1,18 @@
+<div class="dashboard_current">
+  <p>Total number of Tasks this month: <%= @tasks[:tasks_this_month].count %></p>
+    <p>Complete: <%= @tasks[:tasks_this_month].status_complete.count %></p>
+      <p>In-Progress: <%= @tasks[:tasks_this_month].status_in_progress.count %></p>
+        <p>To Do: <%= @tasks[:tasks_this_month].status_to_do.count %></p>
+  <p>Number of BAU tasks this month: <%= @tasks[:baus_this_month].status_complete.count %></p>
+    <p>Complete: <%= @tasks[:baus_this_month].status_complete.count %></p>
+      <p>In-Progress: <%= @tasks[:baus_this_month].status_in_progress.count %></p>
+        <p>To Do: <%= @tasks[:baus_this_month].status_to_do.count %></p>
+
+  <canvas id="myChart_bar" width="400" height="400"></canvas>
+  <canvas id="myChart_pie" width="400" height="400"></canvas>
+
+  <p>Number of Project tasks this month:<%= @tasks[:projects_this_month].count %></p>
+    <p>Complete: <%= @tasks[:projects_this_month].status_complete.count %></p>
+      <p>In-Progress: <%= @tasks[:projects_this_month].status_in_progress.count %></p>
+        <p>To Do: <%= @tasks[:projects_this_month].status_to_do.count %></p>
+</div>

@@ -1,0 +1,7 @@
+<div class="bau_current" style="color: blue;">
+  <% @tasks[:baus_this_month].each do |task| %>
+    <p>BAU description: <%= task.description %></p>
+    <p>BAU status: <%= task.status %></p>
+    <p>Due date: <%= task.due_date %></p>
+  	<% end %>
+</div>

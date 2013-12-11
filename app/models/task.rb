@@ -7,7 +7,7 @@ class Task < ActiveRecord::Base
     [["Bau","Bau"],["Project","Project"]]
   end
 
-  scope :current_month, -> {
+    scope :current_month, -> {
 		where(due_date: (Time.now.beginning_of_month..Time.now.end_of_month))
 	}
 

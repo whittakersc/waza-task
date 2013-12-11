@@ -1,0 +1,8 @@
+<div class="projects_current" style="color: green;">
+  <% @tasks[:projects_this_month].each do |task| %>
+    <p>Project description: <%= task.description %></p>
+    <p>Project status: <%= task.status %></p>
+    <p>Project date: <%= task.due_date %></p>
+    <p>Requested by: <%= task.requested_by %></p>
+  	<% end %>
+</div>
