@@ -1,3 +1,68 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%; 
+  width: 100%;
+  background: url(bg.png) no-repeat center center;
+  background-size: cover;
+  background-position: right top;
+}
+
+ // Logo -----------------------*/
+
+#logo {
+	margin: 44px;
+	
+}
+
+/*search bar -----------------------*/
+
+input:focus {
+	outline: none;
+}
+
+#search {
+	position: absolute;
+	top: 40px;
+  	right: 30%;
+}
+
+#search input[type="text"] {
+    background: url(search-dark.png) no-repeat 13px 13px #fcfcfc;
+    border: 0 none;
+    font-family: 16px, 'Source Sans Pro', sans-serif;
+    width:150px;
+    color: #ff2a65;
+    position: -30px;
+    padding: 13px 35px 13px 55px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    margin-top: 10px;
+    position: fixed;
+    }
+
+#search input[type="text"]:focus {
+    background: url(search-white.png) no-repeat 13px 13px #444;
+    color: #ff2a65;
+    width: 200px;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    }
+
+   
