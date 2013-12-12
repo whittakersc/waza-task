@@ -11,3 +11,76 @@
  *= require_self
  *= require_tree .
  */
+
+.sidebar {
+	background: #333333;
+	width: 70px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 200;
+}
+
+
+
+.sidebar ul {
+	margin: 0 auto;
+	position: relative;
+	padding-left: 10px;
+}
+
+.sidebar a {
+	margin: 0 auto;
+}
+
+.icon-caricon {
+	background: url(caricon.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+
+.icon-gridicon {
+	background: url(gridicon.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+
+.completed-to-dos {
+	background: url(completed.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.all-to-dos {
+	background: url(alltodos.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.in-progress {
+	background: url(inprogress.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.new-task {
+	background: url(addtask.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+}
