@@ -4,23 +4,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .background {
+
   z-index: -1;
   // position: absolute;
+
   top: 0;
   bottom: 0;
   height: 100%; 
   width: 100%;
   background: url(bg.png) no-repeat center center;
   background-size: cover;
-  background-position: right top;
+ 
 }
 
- // Logo -----------------------*/
+
 
 #logo {
+
 	margin: 44px;
 	z-index: 1;
 	;
+
+  position: fixed;
+  width: 100px;
+  margin: 20px
+
 	
 }
 
