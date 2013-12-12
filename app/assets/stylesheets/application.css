@@ -32,6 +32,7 @@
 
 .sidebar a {
 	margin: 0 auto;
+	z-index: 400;
 }
 
 .icon-caricon {
@@ -84,3 +85,4 @@
 	display: inline-block;
 	vertical-align: middle;
 }
+
