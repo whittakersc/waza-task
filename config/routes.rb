@@ -2,7 +2,7 @@ TMApp::Application.routes.draw do
 
   devise_for :users, :controllers => { :registrations => :registrations }
   
-  root "teams#index"
+  root "tasks#index"
 
   resources :navigation, only: [:index]
 

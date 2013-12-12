@@ -8,18 +8,30 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 task_list = [
- [ "Test1", Time.now, 'To Do', "Andrew", 1, 'Bau'],
- [ "Test2", Time.now, 'To Do', "Simon", 2, 'Project' ],
- [ "Test3", Time.now, 'In-Progress', "Andrew", 1,'Bau'],
- [ "Test4", Time.now, 'In-Progress', "Simon", 2,'Project'],
- [ "Test5", Time.now, 'Complete', "Andrew", 1,'Bau' ],
- [ "Test11", Time.now, 'Complete', "Simon", 2, 'Project' ],
- [ "Test6", Time.now.next_month, 'To Do', "Andrew", 1, 'Bau' ],
- [ "Test7", Time.now.next_month, 'To Do', "Simon", 2,'Project' ],
- [ "Test8", Time.now.next_month, 'In-progress', "Andrew", 1, 'Bau' ],
- [ "Test9", Time.now.next_month, 'In-Progress', "Simon", 2, 'Project' ],
- [ "Test10", Time.now.next_month, 'Complete', "Andrew", 1, 'Bau' ],
- [ "Test12", Time.now.next_month, 'Complete', "Simon", 2, 'Project' ],
+ # [ "Test1", Time.now, 'To Do', "Andrew", 1, 'Bau'],
+ # [ "Test2", Time.now, 'To Do', "Simon", 2, 'Project' ],
+ # [ "Test3", Time.now, 'In-Progress', "Andrew", 1,'Bau'],
+ # [ "Test4", Time.now, 'In-Progress', "Simon", 2,'Project'],
+ # [ "Test5", Time.now, 'Complete', "Andrew", 1,'Bau' ],
+ # [ "Test11", Time.now, 'Complete', "Simon", 2, 'Project' ],
+ # [ "Test6", Time.now.next_month, 'To Do', "Andrew", 1, 'Bau' ],
+ # [ "Test7", Time.now.next_month, 'To Do', "Simon", 2,'Project' ],
+ # [ "Test8", Time.now.next_month, 'In-progress', "Andrew", 1, 'Bau' ],
+ # [ "Test9", Time.now.next_month, 'In-Progress', "Simon", 2, 'Project' ],
+ # [ "Test10", Time.now.next_month, 'Complete', "Andrew", 1, 'Bau' ],
+ # [ "Test12", Time.now.next_month, 'Complete', "Simon", 2, 'Project' ],
+ [ "Test1", Time.now, 'To Do', "Andrew", 2, 'Bau'],
+ # [ "Test2", Time.now, 'To Do', "Simon", 1, 'Project' ],
+ [ "Test3", Time.now, 'In-Progress', "Andrew", 2,'Bau'],
+ # [ "Test4", Time.now, 'In-Progress', "Simon", 1,'Project'],
+ [ "Test5", Time.now, 'Complete', "Andrew", 2,'Bau' ],
+ # [ "Test11", Time.now, 'Complete', "Simon", 1, 'Project' ],
+ [ "Test6", Time.now.next_month, 'To Do', "Andrew", 2, 'Bau' ],
+ # [ "Test7", Time.now.next_month, 'To Do', "Simon", 1,'Project' ],
+ [ "Test8", Time.now.next_month, 'In-progress', "Andrew", 2, 'Bau' ],
+ # [ "Test9", Time.now.next_month, 'In-Progress', "Simon", 1, 'Project' ],
+ [ "Test10", Time.now.next_month, 'Complete', "Andrew", 2, 'Bau' ]
+ # [ "Test12", Time.now.next_month, 'Complete', "Simon", 1, 'Project' ]
 ]
 
 task_list.each do | task |
