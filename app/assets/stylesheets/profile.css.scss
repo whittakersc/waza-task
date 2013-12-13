@@ -8,13 +8,22 @@
 
 .sticky_pull {
 	text-align: center;
-	position: relative;
-	width: 100px;
-  margin: 0 auto;
+	position: fixed;
+	width: 350px;
+  	margin: 0 auto;
 	bottom: 0px;
-	height: 20px;
-	background-color: red;
+	height: 75px;
+	background: #333333;
 	z-index: 100;
+	margin-left: 10px;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 5px;
+}
+
+.profile_pic {
+	position: fixed;
+	margin-left: 5px;
+
 }
 
 .profile_content {
