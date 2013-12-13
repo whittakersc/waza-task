@@ -1,0 +1,39 @@
+<div id="list_container">
+
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
+       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
+
+</div>
+
+<article>
+  Notes:
+    Click to card view
+    Re-size images?
+    Speed
+    Are we using this carousel for calendar?
+</article>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+
+<script type="text/javascript" src="<%= asset_path 'jquery.waterwheelCarousel.js'%>"></script>
+
+<script>
+
+$(document).ready(function () {
+  $("#list_container").waterwheelCarousel({
+    horizon: 110,
+    horizonOffset: -50,
+    horizonOffsetMultiplier: .7,
+    separation: 150,
+    edgeFadeEnabled: true
+  });
+});
+
+</script>

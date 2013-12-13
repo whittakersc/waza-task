@@ -2,6 +2,14 @@ Task::Application.routes.draw do
   root "welcome#index"
   
   get "task/index"
+  get "task/baus"
+  get "task/projects"
+  get "task/huddle"
+  get "task/dashboard"
+  get "task/issues"
+  get "task/calendar"
+  get "accountsfile/index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

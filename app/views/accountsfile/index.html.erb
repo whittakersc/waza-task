@@ -1,0 +1,36 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+    <link rel="stylesheet" href="/jquery.jOrgChart.css"/>
+
+    <script type="text/javascript" src="<%= asset_path 'jquery.jOrgChart.js'%>"></script>
+
+    <ul id="org" style="display:none">
+    <li>
+      Food
+      <ul>
+        <li>Beer</li>
+        <li>Vegetables
+          <ul>
+            <li>Pumpkin</li>
+            <li><a href="http://tquila.com" target="_blank">Aubergine</a></li>
+          </ul>
+        </li>
+        <li>Bread</li>
+        <li>Chocolate
+          <ul>
+            <li>Topdeck</li>
+            <li>Reese's Cups</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    </ul>
+
+    <script>
+jQuery(document).ready(function() {
+        $("#org").jOrgChart();
+    });
+    
+    </script>

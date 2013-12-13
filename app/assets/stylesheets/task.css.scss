@@ -1,3 +1,86 @@
 // Place all the styles related to the task controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ /*--------index settings -----*/
+.dashboard_container {
+
+  width: 80%;
+  height: 12%;
+  margin: 20px auto;
+  background-color: red;
+
+}
+
+.huddle_container {
+
+  width: 80%;
+  height: 12%;
+  margin: 20px auto;
+  background-color: red;
+
+}
+
+.calendar_container {
+
+  width: 80%;
+  height: 12%;
+  margin: 20px auto;
+  background-color: red;
+
+}
+
+.baus_container {
+
+  width: 80%;
+  height: 12%;
+  margin: 20px auto;
+  background-color: red;
+
+}
+
+.projects_container {
+
+  width: 80%;
+  height: 12%;
+  margin: 20px auto;
+  background-color: red;
+
+}
+
+.issues_container {
+
+  width: 80%;
+  height: 12%;
+  margin: 20px auto;
+  background-color: red;
+
+}
+
+/*  -------- BAUs ---------*/
+
+#list_container {
+  width:900px;
+  height:250px;
+  position:relative;
+  clear:both;
+  overflow:hidden;
+  margin: 300px auto;
+}
+#list_container img {
+  visibility:hidden; /* hide images until carousel positions them */
+  cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
