@@ -1,10 +1,5 @@
-
-$(".button").mouseover(function() {
+$(function(){
     $(".icon-caricon").tooltip();
-    console.log('hello');
-  });
+    $(".in_progress").tooltip();
 
-$(".new-task").mouseover(function() {
-    $(".button").tooltip();
-    console.log('hello');
-  });
+})
