@@ -20,20 +20,35 @@
 ready_function = ->
   $.fn.fullpage anchors: ["firstPage", "secondPage"]
   
-  menu1 =
+  $("#new_task").popover
     id: "new_task"
-    title: "Hello World"
-    contents: [
-      name: "Item 1"
-    ,
-      name: "Item 2"
-    ,
-      name: "Item 3"
-    ]
+    title: "New Task"
+    contents: $('#new_task .contents').html()
+    disableHeader:      false
+
+  $("#add_event").popover
+    id: "add_event"
+    title: "Add Event"
+    contents: $('#add_event .contents').html()
+    disableHeader:      false
   
-  $("#new_task").optionsPopover menu1
-  $("#new_task").on 'click', (e)->
-  	e.preventDefault()
+  $("#chat").popover
+    id: "chat"
+    title: "Start Chatting"
+    contents: $('#chat .contents').html()
+    disableHeader:      false
+  
+  $("#all_apps").popover
+    id: "all_apps"
+    title: "All Apps"
+    contents: $('#all_apps .contents').html()
+    disableHeader:      false
+
+  $(".popover").on 'click', (e)->
+    $('.ui-tooltip').hide()
+    $( "#datepicker" ).datepicker();	
+    e.preventDefault()
 
 $(document).ready ready_function
 $(document).on 'page:load', ready_function
+

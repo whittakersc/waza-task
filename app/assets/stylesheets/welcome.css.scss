@@ -62,7 +62,7 @@ h3 {
     vertical-align: middle;
     color: #666666;
     padding-right:20px;
-	padding-left:20px;
+	 padding-left:20px;
     opacity: 1;
 }
 
@@ -98,7 +98,7 @@ p {
 
 	margin: 44px;
 	z-index: 1;
-	position: fixed;
+	position: absolute;
   width: 100px;
   margin: 20px
 
@@ -144,7 +144,7 @@ input:focus {
     -o-transition: all 0.7s ease 0s;
     transition: all 0.7s ease 0s;
     margin-top: 10px;
-    position: fixed;
+    position: absolute;
     }
 
 #search input[type="text"]:focus {
