@@ -14,22 +14,103 @@
   width: 100%;
   background: url(bg.png) no-repeat center center;
   background-size: cover;
+  text-transform:uppercase;
  
 }
 
+h1 {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 46px;
+    margin: 0 0 23px 0;
+    color: #ff2a65;
+    padding-top: 25px;
+    text-transform:uppercase;
+    padding-left: 50px;
+    opacity: 1;
+}
+
+
+h2 {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+    line-height: 46px;
+    font-size: 42px;
+    margin: 0 0 23px 0;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-transform:uppercase;
+    /*background-color: #ff2a65;*/
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 1;
+}
+    /*border-bottom: 4px solid #ff2a65;;
+*/
+
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    margin-top: -25px;
+    text-align: center;
+    vertical-align: middle;
+    color: #666666;
+    padding-right:20px;
+	padding-left:20px;
+    opacity: 1;
+}
+
+h4 {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+    line-height: 46px;
+    font-size: 32px;
+    margin: 0 0 23px 0;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform:uppercase;
+    /*background-color: #ff2a65;*/
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    vertical-align: middle;
+    opacity: 1;
+    margin-top: -37px;
+    color: white;
+}
+
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
+    line-height: 23px;
+ 
+}
 
 
 #logo {
 
 	margin: 44px;
 	z-index: 1;
-	;
-
-  position: fixed;
+	position: fixed;
   width: 100px;
   margin: 20px
 
-	
+}
+
+.profile_account {
+	margin-left: 120px;
+	bottom: 20px;
+	overflow: hidden;
+	padding-top: 250px;
+	color: white;
+	overflow-x:hidden;
 }
 
 /*search bar -----------------------*/
@@ -105,9 +186,9 @@ body, html {
 .box {
   float: left;
   display: inline-block;
-  width: 21%;
-  height: 21%;
-  margin-top: 2%;
+  width: 30%;
+  height: 230px;
+  margin-top: 30px;
   margin-left: 3%;
   background: yellow;
   box-shadow: 5px 5px 2px -2px hsl(100,40%,89%);

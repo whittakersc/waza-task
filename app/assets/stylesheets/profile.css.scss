@@ -6,34 +6,61 @@
 
 }
 
+.profile_background {
+	opacity: 1;
+}
+
 .sticky_pull {
 	text-align: center;
 	position: fixed;
-	width: 350px;
-  	margin: 0 auto;
-	bottom: 0px;
-	height: 75px;
+	width: 74px;
+  	// margin: 0 auto;
+	bottom: -4px;
+	height: 100px;
 	background: #333333;
 	z-index: 100;
 	margin-left: 10px;
 	border-top-left-radius: 40px;
-	border-top-right-radius: 5px;
+	border-top-right-radius: 40px;
+	left: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	// border: 4px solid rgba(255, 42, 101, .5);
+	transition: .25s ease-in-out;
+	opacity: 0.8;
+}
+
+.sticky_pull2 {
+	opacity: 1;
 }
 
 .profile_pic {
-	position: fixed;
-	margin-left: 5px;
+	position: absolute;
+	margin-left: -30px;
+	margin-top: 7px;
+}
 
+.profile_arrow {
+	position: absolute;
+	margin-left: -12px;
+	margin-top: 76px;
+	opacity: 0.5;
+	transition: opacity .25s ease-in-out;
+}
+
+.profile_arrow2 {
+	opacity: 1;
 }
 
 .profile_content {
-	background-color: purple;
-	width: 80%;
+	background-color: #333333;
+	width: 100%;
 	height: 0px;
 	transition: height 1s;
 	margin: 0 auto;
 	overflow: hidden;
+	opacity: 0.9;
 }
+
 
 .profile_click {
 	height: 340px;

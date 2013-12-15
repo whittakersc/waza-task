@@ -1,13 +1,24 @@
 <div class="profile">
 
-	<div class="sticky_pull">
+
+	<div class="sticky_pull" id="pull">
+
 		
-		<img src="profile_pic.png" class="profile_pic">
-		<h5>Account</h5>
-		<h3>Simon Whittaker</h3>
+		<%= image_tag("profile_pic.png", class: "profile_pic") %>
+		<%= image_tag("profile_arrow.png", class: "profile_arrow") %>		
 	</div>
 
 	<div class="profile_content">
+		<div class="profile_background"></div>
+		<div class="profile_account">
+			<p>Account</p>
+			<h4>Simon Whittaker</h4>
+		</div>
+			<button>Logout</button>
+			<div class="top_buttons">
+				<button>View huddle Board</button>
+		        <button>View Team List</button>
+			</div>
     
     </div>
 
@@ -19,5 +30,21 @@ $(".sticky_pull").click(function() {
   	$(".profile_content").toggleClass("profile_click");
   	console.log('Hello');
 });
+
+pully = $('#pull.sticky_pull');
+
+$(function() {
+           pully.mouseover(function() {
+             $( '#pull' ).addClass( 'sticky_pull2' );
+             $( '.profile_arrow' ).addClass( 'profile_arrow2' );
+           });
+       });
+
+$(function() {
+           pully.mouseout(function() {
+             $( '#pull' ).removeClass( 'sticky_pull2' );
+             $( '.profile_arrow' ).removeClass( 'profile_arrow2' );
+           });
+       });
 
 </script>

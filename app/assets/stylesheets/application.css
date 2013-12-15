@@ -8,9 +8,13 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require jquery.ui.all
  *= require_self
  *= require_tree .
+ *= require onepagescroll
+
  */
+
 
 
 .sidebar {
@@ -26,17 +30,49 @@
 
 }
 
-
-
 .sidebar ul {
 	margin: 0 auto;
 	position: relative;
-	padding-left: 10px;
+	right: 30px;
+	margin: 1em 0;
+  	padding: 0 0 0 40px;
 }
 
 .sidebar a {
 	margin: 0 auto;
 	z-index: 400;
+	margin-bottom: 30px;
+}
+
+.top_buttons button {
+	display: inline;
+	opacity: 1;
+	width: 22%;
+	height: 56px;
+	background-color: #ff2a65;
+	color: #000;
+	border: 0;
+	font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: right;
+    vertical-align: middle;
+    color: white;
+    opacity: 1;
+    margin-right: 15px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-right: 18px;
+    box-shadow: 5px 5px 2px -2px hsl(100,40%,89%);
+
+}
+
+.top_buttons {
+  display: flex;
+	margin-top: -100px; 
+  margin-left: 461px;
+
 }
 
 .icon-caricon {
@@ -89,4 +125,61 @@
 	display: inline-block;
 	vertical-align: middle;
 }
+
+
+.icon-gridicon:hover {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	background-color: #ff2a65;
+	padding:5px 5px 5px 5px;
+	transition: opacity .25s ease-in-out;
+	vertical-align: middle;
+}
+
+.completed-to-dos:hover {
+	background: url(completed.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	background-color: #ff2a65;
+	padding:5px 5px 5px 5px;
+	transition: opacity .25s ease-in-out;
+	vertical-align: middle;
+}
+
+.all-to-dos:hover {
+	background: url(alltodos_white.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	background-color: #ff2a65;
+	padding:5px 30px 5px 5px;
+	transition: opacity .25s ease-in-out;
+	vertical-align: middle;
+}
+
+.in-progress:hover {
+	background: url(inprogress_white.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	background-color: #ff2a65;
+	padding:5px 5px 5px 5px;
+	transition: opacity .25s ease-in-out;
+	vertical-align: middle;
+}
+
+
+.new-task:hover {
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	background-color: #ff2a65;
+	padding:5px 5px 5px 5px;
+	transition: opacity .25s ease-in-out;
+	vertical-align: middle;
+}
+
+
 
