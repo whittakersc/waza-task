@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require onepagescroll.min
+//= require popover
 //= require_tree .
 //= require jquery.ui.all
 
