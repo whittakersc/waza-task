@@ -1,5 +1,5 @@
 .ui-tooltip {
-    background: #666;
+    background: #333333;
     color: white;
     border: none;
     padding: 0;
@@ -7,7 +7,7 @@
 }
 .ui-tooltip-content {
     position: relative;
-    padding: 1em;
+    padding: 0.5em;
 }
 .ui-tooltip-content::after {
     content: '';
@@ -17,8 +17,8 @@
     width: 0;
 }
 .left .ui-tooltip-content::after {
-    top: 18px;
+    top: 10px;
     right: -10px;
-    border-color: transparent #666;
+    border-color: transparent #333333;
     border-width: 10px 0px 10px 10px;
 }

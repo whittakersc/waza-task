@@ -391,7 +391,7 @@ Popover.getLeft = function (target) {
     }
 
     //Returns left offset of popover from window.
-    return {targetLeft: targetLeft, popoverLeft: offset};
+    return {targetLeft: targetLeft, popoverLeft: offset-90};
 };
 
 Popover.getTop = function(target){
@@ -447,7 +447,7 @@ Popover.getTop = function(target){
      console.log("\n");
      */
 
-    return popoverTop;
+    return popoverTop-40;
 };
 
 Popover.setCaretPosition = function(offset){
