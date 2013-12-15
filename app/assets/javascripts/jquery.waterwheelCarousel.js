@@ -467,6 +467,12 @@
      * to get the clicked item to the center, or will fire the custom event
      * the user passed in if the center item is clicked
      */
+    $(this).find(startingOptions.selector || 'img').bind("click", function () {
+      var itemPosition = $(this).data().currentPosition;
+      if (itemPosition == 0) {
+        options.clickedCenter($(this));
+      }
+    });
     $(this).find(startingOptions.selector || 'img').bind("mouseover", function () {
       var itemPosition = $(this).data().currentPosition;
 
@@ -489,9 +495,7 @@
       options.autoPlay = 0;
       
       var rotations = Math.abs(itemPosition);
-      if (itemPosition == 0) {
-        options.clickedCenter($(this));
-      } else {
+      if (itemPosition != 0) {
         // Fire the 'moving' callbacks
         options.movingFromCenter(data.currentCenterItem);
         options.movingToCenter($(this));
@@ -520,6 +524,7 @@
         return false;
       }
     });
+
 
     function nextItemFromCenter() {
       var $next = data.currentCenterItem.next();

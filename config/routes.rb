@@ -10,6 +10,7 @@ Task::Application.routes.draw do
   get "task/dashboard"
   get "task/issues"
   get "task/calendar"
+  get "task/show"
   get "accountsfile/index"
 
   # The priority is based upon order of creation: first created -> highest priority.

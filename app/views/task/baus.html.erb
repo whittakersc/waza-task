@@ -11,14 +11,12 @@
 
 <!-- <div class="view_container"> -->
   <div id="view_carousel">
-    <li><%= render 'tasks_card' %></li>
-   <li><%= render 'tasks_card' %></li>
-   <li><%= render 'tasks_card' %></li>
-   <li><%= render 'tasks_card' %></li>
-   <li><%= render 'tasks_card' %></li>
-   <li><%= render 'tasks_card' %></li>
-   <li><%= render 'tasks_card' %></li>
-   <li><%= render 'tasks_card' %></li>
+   <li><a href="/task/show"><%= render 'tasks_card' %></a></li>
+   <li><a href="/task/show"><%= render 'tasks_card' %></a></li>
+   <li><a href="/task/show"><%= render 'tasks_card' %></a></li>
+   <li><a href="/task/show"><%= render 'tasks_card' %></a></li>
+   <li><a href="/task/show"><%= render 'tasks_card' %></a></li>
+   <li><a href="/task/show"><%= render 'tasks_card' %></a></li> 
   </div>
 <!-- </div> -->
 
@@ -37,7 +35,10 @@ $(document).ready(function () {
     separation: 250,
     edgeFadeEnabled: true,
     selector: 'li',
-    preloadImages: false
+    preloadImages: false,
+    clickedCenter: function() {
+      window.location.href="google.com"
+    }
   });
 });
 
