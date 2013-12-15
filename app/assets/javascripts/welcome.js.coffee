@@ -22,19 +22,26 @@ ready_function = ->
   
   $("#new_task").popover
     id: "new_task"
-    title: "Hello Task"
+    title: "New Task"
     contents: $('#new_task .contents').html()
     disableHeader:      false
 
   $("#add_event").popover
     id: "add_event"
-    title: "Hello Event"
+    title: "Add Event"
     contents: $('#add_event .contents').html()
     disableHeader:      false
+  
   $("#chat").popover
     id: "chat"
-    title: "Hello Chat"
+    title: "Start Chatting"
     contents: $('#chat .contents').html()
+    disableHeader:      false
+  
+  $("#all_apps").popover
+    id: "all_apps"
+    title: "All Apps"
+    contents: $('#all_apps .contents').html()
     disableHeader:      false
 
   $(".popover").on 'click', (e)->
