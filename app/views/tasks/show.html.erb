@@ -1,14 +1,14 @@
 <div class="nav_container">
   <ul>
-    <li><%= link_to 'Calendar', task_calendar_path %></li>
-    <li><%= link_to 'Huddle', task_huddle_path %></li>
-    <li><%= link_to 'Dashboard', task_dashboard_path %></li>
-    <li><%= link_to 'BAU', task_baus_path %></li>
-    <li><%= link_to 'Projects', task_projects_path %></li>
-    <li><%= link_to 'Issues', task_issues_path %></li>
+    <li><%= link_to 'Calendar', tasks_calendar_path %></li>
+    <li><%= link_to 'Huddle', tasks_huddle_path %></li>
+    <li><%= link_to 'Dashboard', tasks_dashboard_path %></li>
+    <li><%= link_to 'BAU', tasks_baus_path %></li>
+    <li><%= link_to 'Projects', tasks_projects_path %></li>
+    <li><%= link_to 'Issues', tasks_issues_path %></li>
   </ul>
 </div>
-
+<%= render 'tasks_card', task: @task %>
 <div class="card_show_container">
 
 <div class="left_block">

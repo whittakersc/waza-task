@@ -3,15 +3,18 @@ WazaTask::Application.routes.draw do
 
   get "welcome/spike"
   
-  get "task/index"
-  get "task/baus"
-  get "task/projects"
-  get "task/huddle"
-  get "task/dashboard"
-  get "task/issues"
-  get "task/calendar"
-  get "task/show"
+  get "tasks/index"
+  get "tasks/baus"
+  get "tasks/projects"
+  get "tasks/huddle"
+  get "tasks/dashboard"
+  get "tasks/issues"
+  get "tasks/calendar"
   get "accountsfile/index"
+
+  resources :tasks
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
