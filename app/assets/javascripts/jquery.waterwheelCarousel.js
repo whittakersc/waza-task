@@ -17,8 +17,9 @@
 
     function initializeCarouselData() {
       data = {
+        selector: options.selector,
         itemsContainer:         $(carousel),
-        totalItems:             $(carousel).find('li').length,
+        totalItems:             $(carousel).find(options.selector).length,
         containerWidth:         $(carousel).width(),
         containerHeight:        $(carousel).height(),
         currentCenterItem:      null,
@@ -35,7 +36,7 @@
         rightItemsCount:        0,
         performingSetup:        true
       };
-      data.itemsContainer.find('li').removeClass(options.activeClassName);
+      data.itemsContainer.find(options.selector).removeClass(options.activeClassName);
     }
 
     /**
@@ -101,7 +102,7 @@
      * original dimensions.
      */
     function setOriginalItemDimensions() {
-      data.itemsContainer.find('li').each(function () {
+      data.itemsContainer.find(options.selector).each(function () {
         if ($(this).data('original_width') == undefined || options.forcedImageWidth > 0) {
           $(this).data('original_width', $(this).width());
         }
@@ -119,7 +120,7 @@
      */
     function forceImageDimensionsIfEnabled() {
       if (options.forcedImageWidth && options.forcedImageHeight) {
-        data.itemsContainer.find('li').each(function () {
+        data.itemsContainer.find(options.selector).each(function () {
           $(this).width(options.forcedImageWidth);
           $(this).height(options.forcedImageHeight);
         });
@@ -178,7 +179,7 @@
      */
     function setupCarousel() {
       // Fill in a data array with jQuery objects of all the images
-      data.items = data.itemsContainer.find('li');
+      data.items = data.itemsContainer.find(options.selector);
       for (var i = 0; i < data.totalItems; i++) {
         data.items[i] = $(data.items[i]);
       }
@@ -194,7 +195,7 @@
       // Default all the items to the center position
       data.itemsContainer
         .css('position','relative')
-        .find('li')
+        .find(options.selector)
           .each(function () {
             // Figure out where the top and left positions for center should be
             var centerPosLeft, centerPosTop;
@@ -466,7 +467,7 @@
      * to get the clicked item to the center, or will fire the custom event
      * the user passed in if the center item is clicked
      */
-    $(this).find('li').bind("mouseover", function () {
+    $(this).find(startingOptions.selector || 'img').bind("mouseover", function () {
       var itemPosition = $(this).data().currentPosition;
 
       if (options.imageNav == false) {
@@ -510,7 +511,7 @@
      * make sure that they aren't active for certain situations
      */
     $(this).find('a').bind("click", function (event) {
-      var isCenter = $(this).find('li').data('currentPosition') == 0;
+      var isCenter = $(this).find(options.selector).data('currentPosition') == 0;
       // should we disable the links?
       if (options.linkHandling === 1 || // turn off all links
           (options.linkHandling === 2 && !isCenter)) // turn off all links except center
@@ -596,7 +597,7 @@
       options = $.extend({}, $.fn.waterwheelCarousel.defaults, newOptions);
 
       initializeCarouselData();
-      data.itemsContainer.find('li').hide();
+      data.itemsContainer.find(options.selector).hide();
       forceImageDimensionsIfEnabled();
       preload(function () {
         setOriginalItemDimensions();
@@ -650,6 +651,7 @@
     keyboardNav:                false,             // set to true to move the carousel with the arrow keys
     keyboardNavOverride:        true,              // set to true to override the normal functionality of the arrow keys (prevents scrolling)
     imageNav:                   true,              // clicking a non-center image will rotate that image to the center
+    selector: 'img',
 
     // preloader
     preloadImages:              true,  // disable/enable the image preloader. 
