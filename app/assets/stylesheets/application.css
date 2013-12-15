@@ -84,10 +84,9 @@
 }
 
 .sidebar .button span:hover {
-		width: 48px;
+	width: 48px;
 	height: 48px;
 	display: inline-block;
-	background-color: #ff2a65;
 	transition: opacity .25s ease-in-out;
 	vertical-align: middle;
 }

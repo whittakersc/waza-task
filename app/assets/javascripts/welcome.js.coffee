@@ -45,8 +45,10 @@ ready_function = ->
     disableHeader:      false
 
   $(".popover").on 'click', (e)->
-  	$('.ui-tooltip').hide()
-  	e.preventDefault()
+    $('.ui-tooltip').hide()
+    $( "#datepicker" ).datepicker();	
+    e.preventDefault()
 
 $(document).ready ready_function
 $(document).on 'page:load', ready_function
+
