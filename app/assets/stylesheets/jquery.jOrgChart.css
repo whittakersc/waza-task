@@ -1,13 +1,17 @@
 /* Basic styling */
 /* Draw the lines */
+
+.test {
+  margin-left: 50px;
+}
 .jOrgChart .line {
   height                : 20px;
   width                 : 4px;
 }
 
 .jOrgChart .down {
-  background-color 		: black;	
-  margin 				: 0px auto;
+  background-color    : black;  
+  margin        : 0px auto;
 }
 
 .jOrgChart .top {
@@ -31,9 +35,10 @@
 
 /* The node */
 .jOrgChart .node {
-  background-color 		: #35363B;
+  background-color    : #35363B;
   display               : inline-block;
   width                 : 96px;
   height                : 60px;
-  z-index 				: 10;
+  z-index         : 10;
   margin               : 0 2px;
+}

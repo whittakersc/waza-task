@@ -1,5 +1,7 @@
 Task::Application.routes.draw do
   root "welcome#index"
+
+  get "welcome/spike"
   
   get "task/index"
   get "task/baus"

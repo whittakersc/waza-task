@@ -1,29 +1,45 @@
-<div class="dashboard_container">
-  Team Dashboard::Betterflow plugin test || route_3_spike
-</div>
+<div class="nav_container">
+  <ul>
+    <li><%= link_to 'Calendar', task_calendar_path %></li>
+    <li><%= link_to 'Huddle', task_huddle_path %></li>
+    <li><%= link_to 'Dashboard', task_dashboard_path %></li>
+    <li><%= link_to 'BAU', task_baus_path %></li>
+    <li><%= link_to 'Projects', task_projects_path %></li>
+    <li><%= link_to 'Issues', task_issues_path %></li>
+  </ul>
+</div>s
 
-<div class="huddle_container">
-  Team huddle::Or scroll through model.all instances.
-</div>
+<!-- <div class="view_container"> -->
+	<div id="view_carousel">
+	  <img src="<%= asset_path 'Calendar.jpg'%>" />
+	  <img src="<%= asset_path 'Calendar.jpg'%>" />
+	  <img src="<%= asset_path 'Calendar.jpg'%>" />
+	  <img src="<%= asset_path 'Calendar.jpg'%>" />
+	  <img src="<%= asset_path 'Calendar.jpg'%>" />
+	</div>
+<!-- </div> -->
 
-<div class="calendar_container">
-  Calendar
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
-</div>
 
-<div class="baus_container">
-  BAU tasks
-</div>
+<script type="text/javascript" src="<%= asset_path 'jquery.waterwheelCarousel.js'%>"></script>
 
-<div class="projects_container">
-  Project
-</div>
+<script>
 
-<div class="issues_container">
-  Issues
-</div>
-Notes:
-	Are we changing to waterwheel carousel in baus page? with toggle nav? Per Simon idea?
+$(document).ready(function () {
+  $("#view_carousel").waterwheelCarousel({
+    horizon: 110,
+    horizonOffset: -50,
+    horizonOffsetMultiplier: .7,
+    separation: 250,
+    edgeFadeEnabled: true
+  });
+});
+
+</script>
+
+
+
 
 
 

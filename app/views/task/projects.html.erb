@@ -1,23 +1,23 @@
-<div id="list_container">
-
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
-   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
-     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
-       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBL3LJtkkxF8mheMGIPNBzxt3dAVX1wE3rpiBPhH7pYvi5fCe" />
-
+<div class="nav_container">
+  <ul>
+    <li><%= link_to 'Calendar', task_calendar_path %></li>
+    <li><%= link_to 'Huddle', task_huddle_path %></li>
+    <li><%= link_to 'Dashboard', task_dashboard_path %></li>
+    <li><%= link_to 'BAU', task_baus_path %></li>
+    <li><%= link_to 'Projects', task_projects_path %></li>
+    <li><%= link_to 'Issues', task_issues_path %></li>
+  </ul>
 </div>
 
-<article>
-  Notes:
-    Click to card view
-    Re-size images?
-    Speed
-    Are we using this carousel for calendar?
-</article>
+<!-- <div class="view_container"> -->
+  <div id="view_carousel">
+    <img src="<%= asset_path 'projects.png'%>" />
+    <img src="<%= asset_path 'projects.png'%>" />
+    <img src="<%= asset_path 'projects.png'%>" />
+    <img src="<%= asset_path 'projects.png'%>" />
+    <img src="<%= asset_path 'projects.png'%>" />
+  </div>
+<!-- </div> -->
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
@@ -27,13 +27,14 @@
 <script>
 
 $(document).ready(function () {
-  $("#list_container").waterwheelCarousel({
+  $("#view_carousel").waterwheelCarousel({
     horizon: 110,
     horizonOffset: -50,
     horizonOffsetMultiplier: .7,
-    separation: 150,
+    separation: 250,
     edgeFadeEnabled: true
   });
 });
 
+</script>
 </script>

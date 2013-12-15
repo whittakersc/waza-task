@@ -3,59 +3,49 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
  /*--------index settings -----*/
-.dashboard_container {
+.nav_container {
 
   width: 80%;
-  height: 12%;
   margin: 20px auto;
   background-color: red;
 
 }
 
-.huddle_container {
-
-  width: 80%;
-  height: 12%;
-  margin: 20px auto;
-  background-color: red;
-
+.nav_container li {
+  display: inline-block;
 }
 
-.calendar_container {
-
-  width: 80%;
-  height: 12%;
-  margin: 20px auto;
-  background-color: red;
-
+.nav_container a {
+  display: block;
+  font-size: 16px;
+  padding: 15px;
+  text-decoration: none;
 }
 
-.baus_container {
-
+/*.view_container {
+  position: relative;
   width: 80%;
-  height: 12%;
-  margin: 20px auto;
-  background-color: red;
+  height: 70%;
+  background-color: blue;
+  margin: 0 auto;
+  overflow: hidden;
+}*/
 
+#view_carousel {
+  width:80%;
+  height:70%;
+  position:relative;
+  clear:both;
+  overflow:hidden;
+  margin: 10% auto;
+}
+#view_carousel img {
+  visibility:hidden; /* hide images until carousel positions them */
+  cursor:pointer;
+  width: 60%;
+  height: 50%;
 }
 
-.projects_container {
-
-  width: 80%;
-  height: 12%;
-  margin: 20px auto;
-  background-color: red;
-
-}
-
-.issues_container {
-
-  width: 80%;
-  height: 12%;
-  margin: 20px auto;
-  background-color: red;
-
-}
 
 /*  -------- BAUs ---------*/
 

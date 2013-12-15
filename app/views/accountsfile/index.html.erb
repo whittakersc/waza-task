@@ -2,10 +2,11 @@
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
 
-    <link rel="stylesheet" href="/jquery.jOrgChart.css"/>
+    <link rel="stylesheet" href="<%= asset_path 'jquery.jOrgChart.css'%>"/>
 
     <script type="text/javascript" src="<%= asset_path 'jquery.jOrgChart.js'%>"></script>
 
+<div class"test">
     <ul id="org" style="display:none">
     <li>
       Food
@@ -27,6 +28,16 @@
       </ul>
     </li>
     </ul>
+
+  </div>
+
+
+
+  Notes:
+
+  Need to look at moving around page.  Tried, no luck.
+
+  No tooltip.js as per console?  Will implementing elsewhere fix?
 
     <script>
 jQuery(document).ready(function() {
