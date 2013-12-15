@@ -19,13 +19,11 @@ ul, ol {
    COMMONS
 ========================================================================== */
 
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body {
     background-color: #EEEEEE;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
-    font-size: x-small;
     color: #666666;
 }
 
