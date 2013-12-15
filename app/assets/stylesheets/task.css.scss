@@ -39,11 +39,12 @@
   overflow:hidden;
   margin: 10% auto;
 }
-#view_carousel img {
+#view_carousel li {
   visibility:hidden; /* hide images until carousel positions them */
   cursor:pointer;
   width: 60%;
   height: 50%;
+  border: 1px solid black;
 }
 
 

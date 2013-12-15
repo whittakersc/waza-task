@@ -11,11 +11,14 @@
 
 <!-- <div class="view_container"> -->
   <div id="view_carousel">
-    <img src="<%= asset_path 'task_cards.jpg'%>" />
-    <img src="<%= asset_path 'task_cards.jpg'%>" />
-    <img src="<%= asset_path 'task_cards.jpg'%>" />
-    <img src="<%= asset_path 'task_cards.jpg'%>" />
-    <img src="<%= asset_path 'task_cards.jpg'%>" />
+    <li><%= render 'tasks_card' %></li>
+   <li><%= render 'tasks_card' %></li>
+   <li><%= render 'tasks_card' %></li>
+   <li><%= render 'tasks_card' %></li>
+   <li><%= render 'tasks_card' %></li>
+   <li><%= render 'tasks_card' %></li>
+   <li><%= render 'tasks_card' %></li>
+   <li><%= render 'tasks_card' %></li>
   </div>
 <!-- </div> -->
 
@@ -32,7 +35,8 @@ $(document).ready(function () {
     horizonOffset: -50,
     horizonOffsetMultiplier: .7,
     separation: 250,
-    edgeFadeEnabled: true
+    edgeFadeEnabled: true,
+    preloadImages: false
   });
 });
 
