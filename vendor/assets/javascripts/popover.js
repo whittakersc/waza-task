@@ -391,7 +391,7 @@ Popover.getLeft = function (target) {
     }
 
     //Returns left offset of popover from window.
-    return {targetLeft: targetLeft, popoverLeft: offset-90};
+    return {targetLeft: targetLeft, popoverLeft: offset-56};
 };
 
 Popover.getTop = function(target){
