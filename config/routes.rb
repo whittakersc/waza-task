@@ -1,4 +1,4 @@
-Task::Application.routes.draw do
+WazaTask::Application.routes.draw do
   root "welcome#index"
 
   get "welcome/spike"

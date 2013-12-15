@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Task::Application.load_tasks
+WazaTask::Application.load_tasks
