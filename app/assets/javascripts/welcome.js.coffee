@@ -18,7 +18,7 @@
 
 
 ready_function = ->
-  $.fn.fullpage anchors: ["firstPage", "secondPage"]
+
   
   $("#new_task").popover
     id: "new_task"

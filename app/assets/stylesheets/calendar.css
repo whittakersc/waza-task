@@ -1,0 +1,12 @@
+.dotted_backgroud {
+	position: relative;
+  background-image: url(subtle_dots.png);
+  height: 100%;
+  width: 100%;
+
+}
+
+.task_management {
+	padding-top: 150px;
+	margin-left: -30px;
+}

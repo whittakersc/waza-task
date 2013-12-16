@@ -4,9 +4,18 @@
 
  /*--------index settings -----*/
 .nav_container {
-  width: 80%;
-  margin: 20px auto;
-  background-color: red;
+  
+  margin: auto;
+  background-color: white;
+  border-color: #ff2a65;
+  border-radius: 5px;
+  position: fixed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  width: 950px;
+  position: inherit;
+  margin-top: 20px;
+  margin-left: 344px;
+  padding: 10px 0px 10px 0px;
 }
 
 .nav_container li {
@@ -66,12 +75,9 @@
 }*/
 
 #view_carousel {
-  width:80%;
-  height:70%;
-  position:relative;
+  width:89%;
   clear:both;
-  overflow:hidden;
-  margin: 10% auto;
+  margin: 11% auto;
 }
 #view_carousel li, #view_carousel img {
   visibility:hidden; /* hide images until carousel positions them */
