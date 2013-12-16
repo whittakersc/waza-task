@@ -8,37 +8,39 @@
     <li><%= link_to 'Issues', tasks_issues_path %></li>
   </ul>
 </div>
+
+<%= stylesheet_link_tag "card_show" %>
 <%#= @task.inspect %>
 <%#= render 'tasks_card', task: @task %>
 <div class="card_show_container">
 
 <div class="left_block">
- 	  <h4>Task Description</h4>
+ 	  <span>Task Description</span>
     <p><%= @task.description%></p>
-    <h4>Date due</h4>
+    <span>Date due</span>
     <p><%=@task.due_date%></p>
-    <h4>Time due</h4>
+    <span>Time due</span>
     <p><%=@task.time%></p>
-    <h4>Task Owner</h4>
+    <span>Task Owner</span>
     <p><%=@task.owner%></p>
-    <h4>Expected Hours</h4>
+    <span>Expected Hours</span>
     <p><%=@task.expected_hrs%></p>
 </div>
 
-  <div class="comment_list_container">
-      <h4>Comments:</h4>
-    <% @task.comments.each do |comment| %>
-    <div class="comment_container">
-      <p><%= comment.description %></p>
-      <span> Commented by: comment.user_id.email </span>
-    </div>
-    <% end %>
+<div class="comment_list_container">
+  <span>Comments:</span>
+<% @task.comments.each do |comment| %>
+  <div class="comment_container">
+    <p><%= comment.description %></p>
+    <span> Commented by: comment.user_id.email </span>
   </div>
+<% end %>
+</div>
 
-  <div class="status_position">
-     <p>Task Status</p>
-     <p>In-progress</p>
-   </div>
+<div class="status_position">
+  <span>Task Status</span>
+  <p><%= @task.status%></p>
+</div>
   
 
 </div>

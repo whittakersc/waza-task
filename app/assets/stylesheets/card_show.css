@@ -1,0 +1,55 @@
+/* -- card_show_settings */
+
+.card_show_container {
+  padding: 8px;
+  position: relative;
+  background-color: blue;
+  height: 60%;
+  width: 80%;
+  margin: 10% auto; 
+}
+
+.left_block {
+  width: 40%;
+  float: left;
+  overflow: hidden;
+  padding: 2%;
+  margin: 0;
+}
+
+.left_block span {
+  background-color: yellow;
+  display: block;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.left_block p {
+  background-color: green;
+  display: block;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2%;
+}
+
+.comment_list_container {
+  float: right;
+  background-color: yellow;
+  height: 80%;
+  width: 40%;
+}
+
+.comment_container {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  height: 15%;
+  background-color: red;
+  margin: 2px auto;
+}
+
+.status_position {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

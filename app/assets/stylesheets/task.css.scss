@@ -31,41 +31,7 @@
   font-weight: bold;
 }
 
-.card_show_container {
-  padding: 8px;
-  position: relative;
-  background-color: blue;
-  height: 60%;
-  width: 80%;
-  margin: 0 auto; 
-}
 
-.left_block {
-  width: 40%;
-  float: left;
-}
-
-.comment_list_container {
-  float: right;
-  background-color: yellow;
-  height: 80%;
-  width: 40%;
-}
-
-.comment_container {
-  position: relative;
-  overflow: hidden;
-  width: 80%;
-  height: 15%;
-  background-color: red;
-  margin: 2px auto;
-}
-
-.status_position {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
 
 /*.view_container {
   position: relative;
