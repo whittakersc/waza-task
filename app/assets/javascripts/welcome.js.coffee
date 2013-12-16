@@ -50,5 +50,5 @@ ready_function = ->
     e.preventDefault()
 
 $(document).ready ready_function
-$(document).on 'page:load', ready_function
+# $(document).on 'page:load', ready_function
 
