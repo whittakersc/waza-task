@@ -4,52 +4,44 @@
   padding: 8px;
   position: relative;
   background-color: blue;
-  height: 60%;
-  width: 80%;
-  margin: 10% auto; 
+  height: 57%;
+  width: 949px;
+  margin-left: 225px;
+  margin-top: 5px;
 }
 
-.left_block {
-  width: 40%;
+.comment_list_container {
+  width: 55%;
+  height: 40%;
   float: left;
   overflow: hidden;
   padding: 2%;
   margin: 0;
-}
-
-.left_block span {
-  background-color: yellow;
-  display: block;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.left_block p {
   background-color: green;
-  display: block;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-bottom: 2%;
 }
 
-.comment_list_container {
+.right_block {
   float: right;
   background-color: yellow;
-  height: 80%;
+  height: 98%;
   width: 40%;
-}
-
-.comment_container {
-  position: relative;
+  margin-right: 0;
+  margin-top: 0;
   overflow: hidden;
-  width: 80%;
-  height: 15%;
-  background-color: red;
-  margin: 2px auto;
 }
 
-.status_position {
+.description {
+  float: left;
+  height: 25%;
+  width: 47%;
+  background-color: red;
+  margin: 1px;
+}
+
+.bottom_left {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  height: 46%;
+  width: 58%;
+  top: 50%;
+  background-color: yellow;
 }
