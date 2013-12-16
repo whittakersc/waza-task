@@ -1,3 +1,6 @@
+<div class="dotted_backgroud">
+
+<div class="task_management">
 <div class="nav_container">
   <ul>
     <li><%= link_to 'Calendar', tasks_calendar_path %></li>
@@ -8,37 +11,61 @@
     <li><%= link_to 'Issues', tasks_issues_path %></li>
   </ul>
 </div>
-<%#= @task.inspect %>
-<%#= render 'tasks_card', task: @task %>
-<div class="card_show_container">
-
-<div class="left_block">
- 	  <h4>Task Description</h4>
-    <p><%= @task.description%></p>
-    <h4>Date due</h4>
-    <p><%=@task.due_date%></p>
-    <h4>Time due</h4>
-    <p><%=@task.time%></p>
-    <h4>Task Owner</h4>
-    <p><%=@task.owner%></p>
-    <h4>Expected Hours</h4>
-    <p><%=@task.expected_hrs%></p>
 </div>
 
+<%= stylesheet_link_tag "card_show" %>
+<%#= @task.inspect %>
+<%#= render 'tasks_card', task: @task %>
+  <div class="card_show_container">
+
   <div class="comment_list_container">
-      <h4>Comments:</h4>
-    <% @task.comments.each do |comment| %>
+   	  <span>Comments:</span>
+  <% @task.comments.each do |comment| %>
     <div class="comment_container">
       <p><%= comment.description %></p>
       <span> Commented by: comment.user_id.email </span>
     </div>
-    <% end %>
+  <% end %>
   </div>
 
-  <div class="status_position">
-     <p>Task Status</p>
-     <p>In-progress</p>
-   </div>
-  
+  <div class="bottom_left">
+    asdasdasdasdasd
+  </div>
 
+  <div class="right_block">
+    <div class="description">
+      <span>Task Description</span>
+      <p><%= @task.description%></p>
+    </div>  
+    <div class="description">
+      <span>Date due</span>
+      <p><%=@task.due_date%></p>
+    </div>
+    <div class="description">
+      <span>Time due</span>
+      <p><%=@task.time%></p>
+    </div>
+    <div class="description">
+      <span>Task Owner</span>
+      <p><%=@task.owner%></p>
+    </div>
+    <div class="description">
+      <span>Expected Hours</span>
+      <p><%=@task.expected_hrs%></p>
+    </div>
+    <div class="description">
+      <span>Task Status</span>
+      <p><%= @task.status%></p>
+    </div>
+    <div class="description">
+      <span>Requested by</span>
+      <p><%= @task.requested_by%></p>
+    </div>
+    <div class="description">
+      <span>Report Tag</span>
+      <p><%= @task.report_tag%></p>
+    </div>
+  </div>
+
+</div>
 </div>

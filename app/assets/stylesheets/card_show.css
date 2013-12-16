@@ -1,0 +1,47 @@
+/* -- card_show_settings */
+
+.card_show_container {
+  padding: 8px;
+  position: relative;
+  background-color: blue;
+  height: 57%;
+  width: 949px;
+  margin-left: 225px;
+  margin-top: 5px;
+}
+
+.comment_list_container {
+  width: 55%;
+  height: 40%;
+  float: left;
+  overflow: hidden;
+  padding: 2%;
+  margin: 0;
+  background-color: green;
+}
+
+.right_block {
+  float: right;
+  background-color: yellow;
+  height: 98%;
+  width: 40%;
+  margin-right: 0;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.description {
+  float: left;
+  height: 25%;
+  width: 47%;
+  background-color: red;
+  margin: 1px;
+}
+
+.bottom_left {
+  position: absolute;
+  height: 46%;
+  width: 58%;
+  top: 50%;
+  background-color: yellow;
+}

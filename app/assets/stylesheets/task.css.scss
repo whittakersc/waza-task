@@ -48,6 +48,7 @@
   border-right: none;
 }
 
+<<<<<<< HEAD
 .nav_container li:hover {
   display: inline-block;
   border-right: 1px solid #ff2a65;
@@ -74,21 +75,9 @@
   height: 80%;
   width: 40%;
 }
+=======
+>>>>>>> 86ed1b310b9334bd3327cb2afa665422031c6434
 
-.comment_container {
-  position: relative;
-  overflow: hidden;
-  width: 80%;
-  height: 15%;
-  background-color: red;
-  margin: 2px auto;
-}
-
-.status_position {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
 
 /*.view_container {
   position: relative;
