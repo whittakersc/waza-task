@@ -31,7 +31,7 @@
 .profile_container {
 	position: fixed;
 	width: 100%;
-	bottom: 0px;
+	top: 0px;
 	z-index: 90;
 	opacity: 1;
 	background-color: #333333;
@@ -82,13 +82,13 @@
 .profile_pic {
 	position: absolute;
 	margin-left: -30px;
-	margin-top: 7px;
+	margin-top: 34px;
 }
 
 .profile_arrow {
 	position: absolute;
 	margin-left: -12px;
-	margin-top: 76px;
+	margin-top: 15px;
 	opacity: 0.5;
 	transition: opacity .25s ease-in-out;
 }
@@ -104,6 +104,7 @@
 	margin: 0 auto;
 	overflow: hidden;
 	opacity: 0.9;
+
 }
 
 

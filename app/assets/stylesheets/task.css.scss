@@ -8,27 +8,44 @@
   margin: auto;
   background-color: white;
   border-color: #ff2a65;
-  border-radius: 5px;
+  border-: 5px;
   position: fixed;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  width: 950px;
+  width: 949px;
   position: inherit;
   margin-top: 20px;
   margin-left: 258px;
-  padding: 10px 0px 10px 0px;
+  padding: 0px 0px 5px 0px;
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 1px solid #ff2a65;
+  border-bottom-style: none;
 }
 
 .nav_container li {
   display: inline-block;
+  border-right: 1px solid #ff2a65;
+
 }
 
+
+
 .nav_container a {
-  display: block;
+  display: inline-block;
   font-size: 16px;
   padding: 15px;
   text-decoration: none;
   font-family: 'Oxygen', sans-serif;
   font-weight: bold;
+  color: black;
+  float: center;
+  text-align: center;
+  width: 123px; 
+}
+
+.nav_container li:last-child {
+  border-right: none;
 }
 
 
@@ -59,6 +76,7 @@
 
 .carousel-center {
   background-color: #333333;
+
 }
 
 /*  --- BAUs ---from original jquery settings*/
@@ -74,6 +92,7 @@
 #list_container img {
   visibility:hidden; /* hide images until carousel positions them */
   cursor:pointer;
+  z-index: 300;
 }
 
 
