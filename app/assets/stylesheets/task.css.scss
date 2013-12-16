@@ -82,6 +82,7 @@
   margin: 11% auto;
   margin-left: -87px;
 }
+
 #view_carousel li, #view_carousel img {
   visibility:hidden; /* hide images until carousel positions them */
   cursor:pointer;
@@ -90,8 +91,11 @@
   border: 1px solid black;
 }
 
+.carousel-center {
+  background-color: #333333;
+}
 
-/*  -------- BAUs ---------*/
+/*  --- BAUs ---from original jquery settings*/
 
 #list_container {
   width:900px;

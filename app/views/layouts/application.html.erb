@@ -16,10 +16,17 @@
 
 </head>
 <body>
+
 <%= render 'welcome/header' %>	
 <%= render 'shared/profile' %>
 <%= render 'shared/sidebar' %>
 
+
+	<%= render 'shared/profile' %>
+	<%= render 'shared/sidebar' %>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	
 <%= yield %>
 
 

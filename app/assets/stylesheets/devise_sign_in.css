@@ -1,0 +1,16 @@
+#superContainer {
+	background-color: green;
+	height: 100%;
+	width: 100%;
+}
+
+.sign_in_form {
+	position: absolute;
+	width: 20%;
+	height: 20%; /* size control */
+	top: 40%;  /*position control */
+	right: 45%;
+	background-color: red;
+	text-align: center;
+	box-shadow: 10px 10px 5px #888888;
+}
