@@ -100,8 +100,8 @@ p {
 	z-index: 1;
 	position: absolute;
   width: 100px;
-  margin-top: 50px;
-  margin-left: 20px;
+  margin-left: -560px;
+  left: 50%;
 
 }
 
@@ -122,8 +122,8 @@ input:focus {
 
 #search {
 	position: absolute;
-	top: 45px;
-  right: 80%;
+	top: 40px;
+  left: 30%;
   z-index: 500;
 }
 
