@@ -1,31 +1,24 @@
 <% if user_signed_in? %>
 
-<div class="profile">
-
-
-	<div class="sticky_pull" id="pull">
-
-		
+<div class="sticky_pull" id="pull">
 		<%= image_tag("profile_pic.png", class: "profile_pic") %>
 		<%= image_tag("profile_arrow.png", class: "profile_arrow") %>		
-	</div>
+</div>
 
+<div class="profile_container">
 	<div class="profile_content">
-		<div class="profile_background"></div>
-		<div class="profile_account">
-			<p>Account</p>
-			<h4>Simon Whittaker</h4>
+		<div class="left_block">
 		</div>
-			<button>Logout</button>
-			<div class="top_buttons">
-				<button>View huddle Board</button>
-		        <button>View Team List</button>
-		        <% if user_signed_in? %>
-		        <%= button_to "Sign Out", destroy_user_session_path, method: :delete %>
-		        <% end %>
-			</div>
-    
-    </div>
+		<div class="right_block">
+		</div>
+		<div class="top_buttons">
+			<button>View huddle Board</button>
+		    <button>View Team List</button>		   
+		    <% if user_signed_in? %>		        
+		    <button><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></button>		        
+		    <% end %>
+		</div>
+  </div>
 
 </div>
 <% end %>

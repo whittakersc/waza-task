@@ -8,34 +8,31 @@
     <li><%= link_to 'Issues', tasks_issues_path %></li>
   </ul>
 </div>
-<%= render 'tasks_card', task: @task %>
+<%#= @task.inspect %>
+<%#= render 'tasks_card', task: @task %>
 <div class="card_show_container">
 
 <div class="left_block">
- 	  <p>Task Description</p>
- 	  <p>This is the description the task</p>
-
- 	  <p>Task Due Date</p>
- 	  <p>11th January 2014</p>
- 
- 	  <p>Customer</p>
- 	  <p>Internal management</p>
+ 	  <h4>Task Description</h4>
+    <p><%= @task.description%></p>
+    <h4>Date due</h4>
+    <p><%=@task.due_date%></p>
+    <h4>Time due</h4>
+    <p><%=@task.time%></p>
+    <h4>Task Owner</h4>
+    <p><%=@task.owner%></p>
+    <h4>Expected Hours</h4>
+    <p><%=@task.expected_hrs%></p>
 </div>
 
   <div class="comment_list_container">
-      <p>Comments:</p>
+      <h4>Comments:</h4>
+    <% @task.comments.each do |comment| %>
     <div class="comment_container">
-      <p>This is a comment for the task</p>
-      <span> Commented by: Simon </span>
+      <p><%= comment.description %></p>
+      <span> Commented by: comment.user_id.email </span>
     </div>
-    <div class="comment_container">
-      <p>This is a comment for the task</p>
-      <span> Commented by: Simon </span>
-    </div>
-    <div class="comment_container">
-      <p>This is a comment for the task</p>
-      <span> Commented by: Simon </span>
-    </div>
+    <% end %>
   </div>
 
   <div class="status_position">
