@@ -1,3 +1,4 @@
+
 <div class="nav_container">
   <ul>
     <li><%= link_to 'Calendar', tasks_calendar_path %></li>
@@ -40,6 +41,18 @@ $(document).ready(function () {
 });
 
 </script>
+
+
+
+<% @tasks.each do |task| %>
+
+<%= task.description %>
+
+<% end %>
+
+<%= @team %>
+
+
 
 
 

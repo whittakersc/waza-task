@@ -1,7 +1,10 @@
 class TasksController < ApplicationController
   
   def index
-    @tasks = Task.all
+    # raise current_user.team_id.inspect
+    # @tasks = Task.all.where("team_id = ?", current_user.team_id)
+    @tasks = current_user.team.tasks
+    # @team = Team.find(current_user.team_id)
   end
 
   def baus
