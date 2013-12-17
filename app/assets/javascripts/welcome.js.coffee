@@ -17,42 +17,4 @@
 # 	  responsiveFallback: false # You can fallback to normal page scroll by defining the width of the browser in which you want the responsive fallback to be triggered. For example, set this to 600 and whenever the browser's width is less than 600, the fallback will kick in.
 
 
-ready_function = ->
-  
-  $('.sidebar a').on 'click', (e) ->
-    console.log('hi')
-    e.preventDefault();
-
-  console.log('run')
-
-  $("#new_task").popover
-    id: "new_task"
-    title: "New Task"
-    contents: "<p>test</p>"
-
-  $("#add_event").popover
-    id: "add_event"
-    title: "Add Event"
-    contents: $('#add_event .contents').html()
-    disableHeader:      false
-  
-  $("#chat").popover
-    id: "chat"
-    title: "Start Chatting"
-    contents: $('#chat .contents').html()
-    disableHeader:      false
-  
-  $("#all_apps").popover
-    id: "all_apps"
-    title: "All Apps"
-    contents: $('#all_apps .contents').html()
-    disableHeader:      false
-
-  $(".popover").on 'click', (e)->
-    $('.ui-tooltip').hide()
-    $( "#datepicker" ).datepicker();	
-    e.preventDefault()
-
-$(document).ready ready_function
-$(document).on 'page:load', ready_function
 

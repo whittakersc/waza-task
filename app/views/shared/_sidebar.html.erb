@@ -2,69 +2,88 @@
  	<div class="sidebar">
 
  		<ul>
- 			
 			<a href="#" class="button index popover" id="all_apps" title="All Apps">
-				<div class="contents" style="display:none;">
-					<ul>
-						<li>App1</li>
-						<li>App2</li>
-						<li>App3</li>
-					</ul>
-
-				</div>
 				<span class="icon-caricon"></span>
-				
 			</a> 
-			<a href="#" class="button index" title="Spike">
+			<a href="#" class="button_index" title="Spike" data-content="Hello">
 				<span class="icon-gridicon"></span>
 			</a> 
-
 			<a href="#" class="button" title="Carousel View">
 				<span class="icon-caricon"></span>
-				
 			</a> 
 			<a href="#" class="button" title="Grid View">
 				<span class="icon-gridicon"></span>
 			</a> 
-
-			<a href="#" class="button" id="new_task" title="Add Task" >
-				<div class="contents" style="display:none;">
-				Test!!!!
-				</div>
+			<a href="#" class="button" id="new_task" >
 				<span class="new-task" id='new_task_icon'></span>
 			</a> 
-			
 			<a href="#" class="button" title="All To Do's">
 				<span class="all-to-dos"></span>
 			</a>
-
 			<a href="#" class='button' title="In Progress">
 				<span class="in_progress"></span>
 			</a> 
-				
 			<a href="#" class='button' title="Completed">
 				<span class="completed-to-dos"></span>
-				
 			<a href="#" class='button index popover' id="add_event" title="Add Event">
-				<div class="contents" style="display:none;">
-					<p>Date: <input type="text" id="datepicker"></p>
-					<button>Add Task</button>
-				</div>
 				<span class="completed-to-dos"></span>
 			</a> 
-		
-
-			<a href="#" class="button index popover" id="chat" title="Chat" >
-				<div class="contents" style="display:none;">
-					<p>There are no team members online<p>
-
-				</div>
-				<span class="chat"></span>
+			<a href="#" class="button index popover" id="" title="Chat" >
+				<span class="chat" id="chat"></span>
 			</a> 
 
-
-				
-			</a> 
 		</ul>
 	</div>
 <% end %>
+
+<script>
+	$(document).ready(function() {
+		var options = {
+        placement: "left",
+        content: "Hello",
+        trigger: "hover"    
+    }
+		$(".icon-gridicon").popover(options)
+	})
+	    $(".icon-gridicon").on("click", function() { 
+	    $(".icon-gridicon").popover('destroy');
+		$('.popover-content').html('Bell');
+	})
+
+//  var $btn2 = $('.icon-gridicon');
+
+// $btn2.popover({trigger: 'hover'})
+//     .one('click', function() {
+//         $btn2.popover('destroy')
+//             .popover({ trigger: 'click'})
+//             .popover('show');
+//     });
+
+	// $(".icon-gridicon").click(function() {
+	// 	var options2 = {
+ //        placement: "left",
+ //        content: "Dick",
+ //        trigger: "click"    
+ //    }
+	// 	$('.popover-content').html('Bell')
+	// })
+	// 	$(document).ready(function() {
+	// 	var options = {
+ //        placement: "left",
+ //        content: "Hello"
+ //        trigger: "hover"    
+ //    }
+
+	// });
+
+	// $(document).ready(function() {
+	// 	var options2 = {
+ //        placement: "left",
+ //        content: "Dick",
+ //        trigger: "click"    
+ //    }
+	// 	$(".icon-gridicon").popover(options2)
+	// })
+	
+</script>
+
