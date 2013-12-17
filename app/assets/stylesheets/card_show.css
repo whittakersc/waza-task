@@ -45,3 +45,19 @@
   top: 50%;
   background-color: yellow;
 }
+
+.description span {
+  display: block;
+  border: 1px solid black;
+}
+
+.description p {
+  height: 80%;
+  width: 100%;
+  text-align: center;
+  border: 1px solid black;
+  display:-webkit-box;
+  -webkit-box-align:center;
+
+}
+

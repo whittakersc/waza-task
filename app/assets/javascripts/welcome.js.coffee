@@ -18,13 +18,17 @@
 
 
 ready_function = ->
-
   
+  $('.sidebar a').on 'click', (e) ->
+    console.log('hi')
+    e.preventDefault();
+
+  console.log('run')
+
   $("#new_task").popover
     id: "new_task"
     title: "New Task"
-    contents: $('#new_task .contents').html()
-    disableHeader:      false
+    contents: "<p>test</p>"
 
   $("#add_event").popover
     id: "add_event"
@@ -50,5 +54,5 @@ ready_function = ->
     e.preventDefault()
 
 $(document).ready ready_function
-# $(document).on 'page:load', ready_function
+$(document).on 'page:load', ready_function
 
