@@ -28,9 +28,10 @@ body {
 }
 
 a {
-    color: #004756;
-    text-decoration: underline;
+
     font-weight: bold;
+    color: #ff2a65;
+    text-decoration: none;
 }
 
 .wrapper {

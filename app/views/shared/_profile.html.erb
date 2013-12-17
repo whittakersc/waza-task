@@ -7,17 +7,45 @@
 
 <div class="profile_container">
 	<div class="profile_content">
-		<div class="left_block">
-		</div>
-		<div class="right_block">
-		</div>
-		<div class="top_buttons">
-			<button>View huddle Board</button>
-		    <button>View Team List</button>		   
+		<div class="nav_account">
+			<div class="profile_buttons">
+			<button>View huddle Board</button>		
+			<button>View Team List</button>	   
 		    <% if user_signed_in? %>		        
 		    <button><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></button>		        
-		    <% end %>
+		 	<% end %>
+		 </div>
+		 <div class="nav_profile">
+			<span>Account</span><br>
+			<h6>Simon Whittaker</h6>
+			</div>
 		</div>
+		<dic class="content">
+		<div class="left_block">
+			<div class="heading">
+			<h6>Today's Tasks</h6>
+			</div>
+				<ul>
+						<li>Task number</li>
+						<li>To Do Item</li>
+						<li>To Do Item</li>
+						<li>To Do Item</li>
+						<li>To Do Item</li>
+						<li>To Do Item</li>
+				</ul>
+		</div>
+		<div class="right_block">
+				<span>Notifications<span>
+				<ul>
+					<li>You have a Notification</li>
+					<li>You have a Notification</li>
+					<li>You have a Notification</li>
+					<li>You have a Notification</li>
+					<li>You have a Notification</li>
+				</ul>
+		</div>
+		</div>
+	</div>
   </div>
 
 </div>
