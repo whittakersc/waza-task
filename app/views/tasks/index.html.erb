@@ -1,40 +1,14 @@
-<div class="nav_container">
-  <ul>
-    <li><%= link_to 'Calendar', tasks_calendar_path %></li>
-    <li><%= link_to 'Huddle', tasks_huddle_path %></li>
-    <li><%= link_to 'Dashboard', tasks_dashboard_path %></li>
-    <li><%= link_to 'BAU', tasks_baus_path %></li>
-    <li><%= link_to 'Projects', tasks_projects_path %></li>
-    <li><%= link_to 'Issues', tasks_issues_path %></li>
-  </ul>
-</div>
 
 
+<% @tasks.each do |task| %>
 
-<!-- <div class="view_container"> -->
-	<div id="view_carousel">
-	  <img src="<%= asset_path 'Calendar.jpg'%>" />
-	  <img src="<%= asset_path 'Calendar.jpg'%>" />
-	  <img src="<%= asset_path 'Calendar.jpg'%>" />
-	  <img src="<%= asset_path 'Calendar.jpg'%>" />
-	  <img src="<%= asset_path 'Calendar.jpg'%>" />
-	</div>
-<!-- </div> -->
+<%= task.description %>
+
+<% end %>
+
+<%= @team %>
 
 
-<script>
-
-$(document).ready(function () {
-  $("#view_carousel").waterwheelCarousel({
-    horizon: 110,
-    horizonOffset: -50,
-    horizonOffsetMultiplier: .7,
-    separation: 250,
-    edgeFadeEnabled: true
-  });
-});
-
-</script>
 
 
 
