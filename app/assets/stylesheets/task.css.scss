@@ -74,11 +74,19 @@
 }
 
 
-.nav_container li:hover {
+.nav_container li a:hover {
   display: inline-block;
   background-color: #ff2a65;
   color: white;
 }
+
+.nav_container li a:active {
+  display: inline-block;
+  background-color: #ff2a65;
+  color: white;
+}
+
+
 
 .card_show_container {
   padding: 8px;
