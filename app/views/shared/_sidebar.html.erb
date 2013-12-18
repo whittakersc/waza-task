@@ -1,54 +1,86 @@
+
 <% if user_signed_in? %>
- 	<div class="sidebar">
+<div class="sidebar">
 
- 		<ul>
-			<a href="#" class="button index popover" id="all_apps" title="All Apps">
-				<span class="icon-caricon"></span>
-			</a> 
-			<a href="#" class="button_index" title="Spike" data-content="Hello">
-				<span class="icon-gridicon"></span>
-			</a> 
-			<a href="#" class="button" title="Carousel View">
-				<span class="icon-caricon"></span>
-			</a> 
-			<a href="#" class="button" title="Grid View">
-				<span class="icon-gridicon"></span>
-			</a> 
-			<a href="#" class="button" id="new_task" >
-				<span class="new-task" id='new_task_icon'></span>
-			</a> 
-			<a href="#" class="button" title="All To Do's">
-				<span class="all-to-dos"></span>
-			</a>
-			<a href="#" class='button' title="In Progress">
-				<span class="in_progress"></span>
-			</a> 
-			<a href="#" class='button' title="Completed">
-				<span class="completed-to-dos"></span>
-			<a href="#" class='button index popover' id="add_event" title="Add Event">
-				<span class="completed-to-dos"></span>
-			</a> 
-			<a href="#" class="button index popover" id="" title="Chat" >
-				<span class="chat" id="chat"></span>
-			</a> 
+  <ul>
+		<a href="#" class="button" id="all_apps" title="All Apps">
+			<span class="icon-caricon"></span>
+		</a> 
+		<a href="#" class="button" title="Spike">
+			<span class="icon-gridicon"></span>
+		</a> 
+		<a href="#" class="button" title="Carousel View">
+			<span class="icon-caricon"></span>
+		</a> 
+		<a href="#" class="button gridview" title="Grid View">
+			<span class="icon-gridicon"></span>
+		</a> 
+		<a href="#" class="button" title="Add Task">
+			<span class="new-task" title="Add Task"></span>
+		</a> 
+		<a href="#" class="button" title="All To Do's">
+			<span class="all-to-dos"></span>
+		</a>
+		<a href="#" class='button' title="In Progress">
+			<span class="in_progress"></span>
+		</a> 
+		<a href="#" class='button' title="Completed">
+			<span class="completed-to-dos"></span>
+		<a href="#" class='button index popover' id="add_event" title="Add Event">
+			<span class="completed-to-dos"></span>
+		</a> 
+		<a href="#" class="button index popover" id="" title="Chat" >
+			<span class="chat" id="chat"></span>
+		</a> 
+  </ul>
+</div>
+<div id="new-task-form">
+	<form><input type="text"/><br><input type="submit" name="send_button" value="Add task"></form>
+</div>
 
-		</ul>
-	</div>
 <% end %>
 
 <script>
-	$(document).ready(function() {
-		var options = {
-        placement: "left",
-        content: "Hello",
-        trigger: "hover"    
+ $(document).ready(function() {
+ 	var options = {
+ 		trigger: "hover",
+ 		placement: "left"
+ 	}
+
+ 	$(".button").tooltip(options)
+})
+  $(".new-task").on("click", function() { 
+    var options2 = {
+ 	  placement: "left",
+ 	  html: true,
+ 	  title: function() {
+      return $("#popover-head").html();
+    },
+    content: function() {
+      return $('#new-task-form').html();
     }
-		$(".icon-gridicon").popover(options)
-	})
-	    $(".icon-gridicon").on("click", function() { 
-	    $(".icon-gridicon").popover('destroy');
-		$('.popover-content').html('Bell');
-	})
+ }
+   $(".new-task").popover(options2)
+   
+ })
+
+//   <script type="text/javascript">
+//     $(function () {
+//         $("[rel='tooltip']").tooltip();
+//     });
+// <script>
+	// $(document).ready(function() {
+	// 	var options = {
+ //        placement: "left",
+ //        content: "Hello",
+ //        trigger: "hover"    
+ //    }
+	// 	$(".icon-gridicon").popover(options)
+	// })
+	//     $(".icon-gridicon").on("click", function() { 
+	//     $(".icon-gridicon").popover('destroy');
+	// 	$('.popover-content').html('Bell');
+	// })
 
 //  var $btn2 = $('.icon-gridicon');
 

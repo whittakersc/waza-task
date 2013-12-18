@@ -12,10 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require onepagescroll.min
-//= require popover
 //= require bootstrap
 //= require_tree .
-//= require jquery.ui.all
-
 
