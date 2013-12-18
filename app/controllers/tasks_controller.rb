@@ -7,6 +7,17 @@ class TasksController < ApplicationController
     # @team = Team.find(current_user.team_id)
   end
 
+  def new
+    @team = current_user.team
+    @task = @team.tasks.new
+  end
+
+  def create
+    @team = current_user.team
+    @task = @team.tasks.create(params[:task].permit(:description, :owner, :due_date, :actual_hrs, :status, :user_id, :type, :report_tag, :expected_hrs, :requested_by, :time))
+    redirect_to tasks_calendar_path
+  end
+
   def baus
     @tasks = Bau.all
   end

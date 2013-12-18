@@ -8,15 +8,14 @@
   // margin: auto;
   background-color: white;
   border-color: #ff2a65;
-  border-: 5px;
+  border: 5px;
   position: fixed;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   width: 949px;
   position: inherit;
   margin-top: 20px;
-  margin-left: 258px;
+  margin-left: 267px;
   padding: 0px 0px 5px 0px;
-  background-color: white;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   border: 1px solid #ff2a65;
@@ -25,8 +24,38 @@
 
 .nav_container li {
   display: inline-block;
-  border-right: 1px solid #ff2a65;
+  // border-right: 1px solid #ff2a65;
 
+}
+
+#view_carousel li {
+  font-size: 40px;
+  list-style: none;
+  text-align: left;
+}
+
+#tags {
+  background-color: #ff2a65;
+  color: white;
+  font-size: 16px;
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px 0px 10px 0px;
+  margin-left: 100px;
+  margin-right: auto;
+    
+}
+
+#task_text {
+  text-transform: uppercase;
+  margin-top: 100px;
+  margin-left: 100px;
+  color: white;
+}
+
+#owner {
+  margin-left: 100px;
 }
 
 
@@ -44,15 +73,11 @@
   width: 123px; 
 }
 
-.nav_container li:last-child {
-  border-right: none;
-}
-
 
 .nav_container li:hover {
   display: inline-block;
-  border-right: 1px solid #ff2a65;
   background-color: #ff2a65;
+  color: white;
 }
 
 .card_show_container {

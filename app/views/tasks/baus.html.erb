@@ -21,9 +21,15 @@
      <li>
       <%= link_to task_path task do%>
       <%# render 'tasks_card', task: task %>
-        <%= task.description %>
-        <%= task.owner %>
+      <div id="task_text">
+        <%= task.description %><br>
+      </div>
+      <div id="owner">
+        <%= task.owner %><br>
+      </div>
+        <div id="tags">
         <%= task.report_tag %>
+      </div>
       <% end %>
     </li>
     <% end %>
