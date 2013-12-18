@@ -29,12 +29,12 @@ html {
   box-sizing: border-box;
   height: 100%;
   width: 90%;
-  color: #333335;
+  color: #ff2a65;
   visibility: visible !important;
   z-index: 10;
 }
 #popover a {
-  color: #333335;
+  color: white;
 }
 #popoverHeader {
   position: absolute;
