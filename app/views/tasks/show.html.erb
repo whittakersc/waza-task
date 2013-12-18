@@ -23,7 +23,7 @@
   <% @task.comments.each do |comment| %>
     <div class="comment_container">
       <p><%= comment.description %></p>
-      <span> Commented by: comment.user_id.email </span>
+     <!--  <span> Commented by: comment.user_id.email </span> -->
     </div>
   <% end %>
   </div>
@@ -38,8 +38,8 @@
       <p><%= @task.description%></p>
     </div>  
     <div class="description">
-      <span>Date due</span>
-      <p><%=@task.due_date%></p>
+      <span>Date due Month</span>
+      <p><%=@task.due_date.month %></p>
     </div>
     <div class="description">
       <span>Time due</span>

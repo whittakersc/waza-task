@@ -14,9 +14,8 @@
 //= require jquery_ujs
 //= require onepagescroll.min
 //= require popover
+//= require bootstrap
 //= require_tree .
 //= require jquery.ui.all
-
-<script>type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 
