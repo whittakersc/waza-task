@@ -1,0 +1,32 @@
+.new_task_container {
+	position: fixed;
+	height: 55%;
+	width: 50%;
+	background-color: red;
+	margin-left: 10%;
+	margin-top: 10%;
+}
+
+.new_task_container h4 {
+	position: relative;
+	margin-top: 0;
+}
+
+.form_box {
+	float: left;
+	margin: 5%;
+	height: 50%;
+	width: 22%;
+	background-color: yellow;
+}
+
+#middle {
+	height: 40%;
+	width: 22%;
+	margin-top: 8%;
+}
+
+.new_button {
+   	
+}
+
