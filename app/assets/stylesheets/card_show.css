@@ -20,7 +20,7 @@
   background-color: green;
 }
 
-.right_block {
+./*right_block {
   float: right;
   background-color: yellow;
   height: 98%;
@@ -28,7 +28,7 @@
   margin-right: 0;
   margin-top: 0;
   overflow: hidden;
-}
+}*/
 
 .description {
   float: left;

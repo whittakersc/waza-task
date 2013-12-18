@@ -3,38 +3,74 @@
   <nav class="container">
     
     <div class='box'>
+      <div class='overlay'>
+        <h3>Workflow</h3>
+        <img src="<%= asset_path 'icon_workflow.png'%>" />
+      </div>
       <img src="<%= asset_path 'thumb_workflow.png'%>" />
     </div>
 
     <div class='box'>
+       <div class='overlay'>
+        <h3>Resources</h3>
+        <img src="<%= asset_path 'icon_resources.png'%>" />
+      </div>
   <img src="<%= asset_path 'thumb_resources.png'%>" />
     </div>
 
     <div class='box'>
+      <div class='overlay'>
+        <h3>Spike</h3>
+        <img src="<%= asset_path 'icon_spike.png'%>" />
+      </div>
       <img src="<%= asset_path 'spike_thumb.png'%>" />
     </div>
 
      <div class='box'>
+      <div class='overlay'>
+        <h3>Account Files</h3>
+        <img src="<%= asset_path 'icon_files.png'%>" />
+      </div>
     <img src="<%= asset_path 'thumb_account_files.png'%>" />
     </div>
 
      <div class='box'>
+      <div class='overlay'>
+        <h3>Request</h3>
+        <img src="<%= asset_path 'icon_request.png'%>" />
+      </div>
             <img src= "<%= asset_path 'thumb_request.png'%>" />
     </div>
 
     <div class='box'>
+      <div class='overlay'>
+        <h3>Links</h3>
+        <img src="<%= asset_path 'icon_links.png'%>" />
+      </div>
             <img src="<%= asset_path 'thumb_links.png'%>" />
     </div>
 
      <div class='box'>
+      <div class='overlay'>
+        <h3>Evolve</h3>
+        <img src="<%= asset_path 'icon_evolve.png'%>" />
+      </div>
     <img src="<%= asset_path 'thumb_evolve.png'%>" />
     </div>
 
      <div class='box'>
+      <div class='overlay'>
+        <h3>Engineer</h3>
+        <img src="<%= asset_path 'icon_engineer.png'%>" />
+      </div>
             <img src="<%= asset_path 'thumb_engineer.png'%>" />
     </div>
     
     <div class='box'>
+      <div class='overlay'>
+        <h3>Jumpship</h3>
+        <img src="<%= asset_path 'icon_jumpship.png'%>" />
+      </div>
             <img src="<%= asset_path 'thumb_jumpship.png'%>" />
     </div>
 
@@ -43,12 +79,3 @@
 
 <div>
 
-<script>
-$('.box').on('mouseover', function(event) {
-        $(event.currentTarget).css("background-color", "blue");
-});
-
-$('.box').on('mouseleave', function() {
-        $(this).css("background-color", "yellow");
-});
-</script>

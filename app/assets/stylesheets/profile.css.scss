@@ -1,30 +1,21 @@
-.top_buttons button {
+button {
 	display: inline;
-	opacity: 1;
-	width: 12%;
 	height: 36px;
 	background-color: #ff2a65;
-	color: #000;
-	border: 0;
 	font-family: 'Oxygen', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 32px;
-    text-align: right;
     vertical-align: middle;
     color: white;
     opacity: 1;
-    margin-right: 15px;
     text-transform: uppercase;
     border-radius: 5px;
-    padding-top: 10px;
-    padding-right: 18px;
-    box-shadow: 5px 5px 2px -2px hsl(100,40%,89%);
-}
-
-.top_buttons {
-  display: flex;
-  position: bottom;
-
+    padding-top: 2px;
+    padding-right: 23px;
+    margin-right: 8px;
+    margin-top: -20px;
+    padding-left: 23px;
+	border: 0;
 }
 
 
@@ -33,27 +24,135 @@
 	width: 100%;
 	top: 0px;
 	z-index: 90;
-	opacity: 1;
-	background-color: #333333;
+	opacity: 0.8;
+	background-color: white;
 
+}
+
+.content {
+	display: absolute;
+	opacity: 1;
+	border-radius: 5px;
 }
 
 .left_block {
 	float: left;
-	height: 70%;
-	width: 70%;
-	background-color: red;
-	margin-left: 40px;
-	margin-top: 40px;
+	height: 86%;
+	width: 30%;
+	margin-left: 286px;
+	margin-top: -36px;
+	border-radius: 5px;
 }
+
+.heading h6 {
+	text-align: left;
+	font-family: 'Oxygen', sans-serif;
+    font-size: 30px;
+    color: #333;
+    // background-color: #333;
+    border: none;
+    padding-left: 20px;
+    height: 22px;
+    padding: 10px 20px 20px 70px;
+    border-radius: 5px;
+    // border-bottom-left-radius: 0px;
+    // border-bottom-right-radius: 0px;
+    
+}
+
+.left_block li {
+	text-align: left;
+	font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #ff2a65;
+    height: 40px;
+    padding-left: 70px;
+    line-height: 46px;
+    border-top: none;
+    border-bottom: none;
+    opacity: 0.9;
+    border-radius: 10px;	
+    border: 2px solid #ff2a65;
+    margin-top: 7px;
+
+    // border-right: 150px solid #ff2a65;
+
+}
+
+
+.left_block li:hover {
+	text-align: left;
+	font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: white;
+    height: 40px;
+    padding-left: 70px;
+    line-height: 46px;
+    border-top: none;
+    border-bottom: none;
+    opacity: 0.9;
+    border-radius: 10px;	
+    border: 2px solid #ff2a65;
+    background-color: #ff2a65;
+    border: 1px solid #ff2a65;
+    opcaity: 1;
+
+    // border-right: 150px solid #ff2a65;
+
+}
+
+// .left_block li p {
+// 	font-size: 20px;
+// 	display: inline;
+// 	color: white;
+// 	margin-left: 189px;
+// 	position: fixed;
+// 	margin-top: 10px;
+// 	font-weight: bold
+// }
+
+// .due_date {
+// 	content: "Due today";
+// }
 
 .right_block {
 	float: right;
-	height: 70%;
-	width: 70%;
-	background-color: yellow;
-	margin-right: 40px;
-	margin-top: 40px;
+	height: 69%;
+	width: 43%;
+	margin-right: 114px;
+	margin-top: 30px;
+	border-radius: 5px;
+
+}
+
+.right_block li {
+	text-align: left;
+	font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #ff2a65;
+    background-color: #333;
+    border: 1px solid #ff2a65;
+    height: 44px;
+    padding-left: 70px;
+    line-height: 46px;
+    border-top: none;
+    border-bottom: none;
+
+}
+
+.right_block li:hover {
+	text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #ff2a65;
+    border: 1px solid #ff2a65;
+    height: 44px;
+    padding-left: 70px;
+    line-height: 46px;
+    border-top: none;
+
 }
 
 .sticky_pull {
@@ -107,11 +206,67 @@
 	transition: height 1s;
 	margin: 0 auto;
 	overflow: hidden;
-	opacity: 0.7;
+	opacity: 1;
 
 }
 
 
 .profile_click {
-	height: 340px;
+	height: 360px;
 }
+
+.nav_profile {
+	display: inline-block;
+	color: #333;
+}
+
+.nav_profile h6 {
+	font-size: 20px;
+}
+
+.profile_buttons {
+	display: inline-block;
+}
+
+.nav_account {
+	color: white;
+	margin-top: 30px;
+	text-align: right;
+	margin-right: 120px;
+	display: inline-block;
+	width: 93%;
+}
+
+button:last-child {
+	display: inline;
+	height: 36px;
+	background-color: #333333;
+	font-family: 'Oxygen', sans-serif;
+    font-size: 12px;
+    line-height: 32px;
+    vertical-align: middle;
+    color: #ff2a65;
+    opacity: 1;
+    border-radius: 5px;
+    border: 1px solid #ff2a65;
+    padding-top: 2px;
+    padding-right: 23px;
+    margin-right: 34px;
+    margin-top: -20px;
+    padding-left: 23px;
+	
+}
+
+button:last-child:hover {
+	background-color: #ff2a65;
+	color: white;	
+}
+
+
+
+
+
+
+
+
+

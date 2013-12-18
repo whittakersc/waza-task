@@ -187,17 +187,42 @@ body, html {
 
 .box {
   float: left;
-  display: inline-block;
+  // display: inline-block;
   width: 30%;
   height: 230px;
   margin-top: 30px;
   margin-left: 2%;
-  background: yellow;
-  box-shadow: 5px 5px 2px -2px hsl(100,40%,89%);
+  position: relative
 }
 
-.box:hover {
+// .box:hover {
+//   background-color: #ff2a65;
+// }
+
+.overlay {
+  position: absolute;
+  background: rgba(255, 255, 255, .5);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 30px;
+  display: none;
+
+}
+
+.box:hover .overlay {
+  display: block;
   background-color: #ff2a65;
+  text-align: center;
+
+
+}
+
+.overlay h3 {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  position: relative;
+  color: white;
 }
 
 
