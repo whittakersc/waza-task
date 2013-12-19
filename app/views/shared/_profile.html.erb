@@ -32,15 +32,7 @@
 				<h6>Tasks - 5 Tasks due Today</h6>
 
 			</div>
-				<ul>
-						<li><%= @tasks.pop.description %></li>
-						<li><%= @tasks.pop.description %></li>
-						<li><%= @tasks.pop.description %></li>
-						<li><%= @tasks.pop.description %></li>
-						<li><%= @tasks.pop.description %></li>
-						
-
-				
+				<ul class="tasks-list">
 				</ul>
 		</div>
 		</div>
@@ -54,6 +46,12 @@
 $(".sticky_pull").click(function() {
   	$(".profile_content").toggleClass("profile_click");
   	console.log('Hello');
+  	$.get('<%= tasks_profile_path %>', function(tasks) {
+  		tasks.forEach(function(task){
+  			var newTask = '<li>' + task.description + '</li>';
+  			$('.tasks-list').append(newTask)
+  		})
+  	});
 });
 
 pully = $('#pull.sticky_pull');

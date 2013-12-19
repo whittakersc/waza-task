@@ -52,7 +52,7 @@
 	background-position: center;
 }
 
-.icon-caricon {
+/*.icon-caricon {
 	background: url(caricon.png) no-repeat;
 	
 }
@@ -60,6 +60,26 @@
 .icon-gridicon {
 	background: url(gridicon.png) no-repeat;
 	
+}*/
+
+#all_apps {
+	background: url(apps_icon_grey.png) no-repeat; 
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
+}
+
+#all_apps:hover {
+	background: url(apps_icon_pink.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
 }
 
 .completed-to-dos {

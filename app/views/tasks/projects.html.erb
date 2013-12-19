@@ -14,11 +14,60 @@
 
 <!-- <div class="view_container"> -->
   <div id="view_carousel">
-    <img src="<%= asset_path 'projects.png'%>" />
-    <img src="<%= asset_path 'projects.png'%>" />
-    <img src="<%= asset_path 'projects.png'%>" />
-    <img src="<%= asset_path 'projects.png'%>" />
-    <img src="<%= asset_path 'projects.png'%>" />
+  <li>
+      <div class="card_show_container">
+
+  <div class="comment_list_container">
+      <span>Comments:</span>
+  <%#@task.comments.each do |comment| %>
+    <div class="comment_container">
+      <p><%#= comment.description %></p>
+      <span> Commented by: comment.user_id.email </span>
+    </div>
+  <%# end %>
+  </div>
+
+  <div class="bottom_left">
+    asdasdasdasdasd
+  </div>
+
+  <div class="right_block2">
+    <div class="description">
+      <span>Task Description</span>
+      <p><%= @task.description%></p>
+    </div>  
+    <div class="description">
+      <span>Date due</span>
+      <p><%=@task.due_date%></p>
+    </div>
+    <div class="description">
+      <span>Time due</span>
+      <p><%=@task.time%></p>
+    </div>
+    <div class="description">
+      <span>Task Owner</span>
+      <p><%=@task.owner%></p>
+    </div>
+    <div class="description">
+      <span>Expected Hours</span>
+      <p><%=@task.expected_hrs%></p>
+    </div>
+    <div class="description">
+      <span>Task Status</span>
+      <p><%= @task.status%></p>
+    </div>
+    <div class="description">
+      <span>Requested by</span>
+      <p><%= @task.requested_by%></p>
+    </div>
+    <div class="description">
+      <span>Report Tag</span>
+      <p><%= @task.report_tag%></p>
+    </div>
+  </div>
+</li>
+
+</div>
   </div>
 </div>
 <!-- </div> -->
@@ -26,7 +75,6 @@
 
 
 
-<script type="text/javascript" src="<%= asset_path 'jquery.waterwheelCarousel.js'%>"></script>
 
 <script>
 
@@ -36,7 +84,12 @@ $(document).ready(function () {
     horizonOffset: -50,
     horizonOffsetMultiplier: .7,
     separation: 250,
-    edgeFadeEnabled: true
+    edgeFadeEnabled: true,
+    selector: 'li',
+    preloadImages: false,
+    clickedCenter: function(element) {
+      window.location.href=element.children('a').attr('href');
+    }
   });
 });
 

@@ -11,6 +11,7 @@ WazaTask::Application.routes.draw do
   get "tasks/issues"
   get "tasks/calendar"
   get "accountsfile/index"
+  get "tasks/profile"
 
   resources :tasks
 

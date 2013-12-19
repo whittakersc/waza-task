@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  respond_to :html, :json
   
   def index
     # raise current_user.team_id.inspect
@@ -23,7 +24,7 @@ class TasksController < ApplicationController
   end
 
   def projects
-    @tasks = Project.all
+    @task = Project.all.last
   end
 
   def huddle
@@ -44,6 +45,10 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+  end
+
+  def profile
+    render json: current_user.team.tasks.last(5) 
   end
   
 end
