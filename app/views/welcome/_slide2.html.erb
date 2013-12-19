@@ -4,7 +4,7 @@
     
     <div class='box'>
 
-      <div class='overlay'>
+      <div class='overlay' id="boxlink">
         <h3>Workflow</h3>
         <img src="<%= asset_path 'icon_workflow.png'%>" />
       </div>
@@ -77,6 +77,19 @@
 
 
   </nav>
+  <script>
+
+    $( "boxlink").on( 'click', function() {
+
+
+    $.get('tasks/baus',function(data) {
+      $( ".box").html(" " + data);
+    });
+    });
+    
+
+   </script>
+
 
 <div>
 

@@ -14,7 +14,7 @@
   width: 949px;
   position: inherit;
   margin-top: 20px;
-  margin-left: 267px;
+  margin-left: 246px;
   padding: 0px 0px 5px 0px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -157,7 +157,39 @@
 }
 
 
+/*  --- calendar ---*/
 
+table {
+  position: inherit;
+  height: 587px;
+  width: 950px;
+  top: 20%;
+  left: 20%;
+
+}
+
+.day_block {
+  background-color: red;
+  height: 100px;
+  width:  135px;
+  overflow: hidden;
+  color: white;
+}
+
+table th {
+  background-color: green;
+  height: 20px;
+}
+
+.day_block a {
+  color: white;
+}
+
+.task_card {
+  position: relative;
+  background-color: black;
+  border: 1px solid white;
+}
 
 
 

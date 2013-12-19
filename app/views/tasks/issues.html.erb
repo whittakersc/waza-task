@@ -13,16 +13,48 @@
 </div>
 
 <!-- <div class="view_container"> -->
-	<div id="view_carousel">
-	  <img src="<%= asset_path 'issues_card.jpg'%>" />
-	  <img src="<%= asset_path 'issues_card.jpg'%>" />
-	  <img src="<%= asset_path 'issues_card.jpg'%>" />
-    <img src="<%= asset_path 'issues_card.jpg'%>" />
-	  <img src="<%= asset_path 'issues_card.jpg'%>" />
-    <img src="<%= asset_path 'issues_card.jpg'%>" />
-    <img src="<%= asset_path 'issues_card.jpg'%>" />
-	</div>
+  <div id="view_carousel">
+<%= calendar_for(@tasks, :year => @date.year, :month => @date.month) do |calendar| %>
+  <%= calendar.head('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun') %>
+  <%= calendar.day(:day_method => :due_date) do |date, tasks| %>
+  <div class="day_block">
+    <%= date.day %>
+  <% tasks.each do |task| %>
+  <div class="task_card">
+  <%= link_to task.type, task_path(task) %>
+  </div>
+  <% end %>
 </div>
+  <% end %>
+<% end %>
+<%= calendar_for(@tasks, :year => @date.year, :month => @date.month) do |calendar| %>
+  <%= calendar.head('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun') %>
+  <%= calendar.day(:day_method => :due_date) do |date, tasks| %>
+  <div class="day_block">
+    <%= date.day %>
+  <% tasks.each do |task| %>
+  <div class="task_card">
+  <%= link_to task.type, task_path(task) %>
+  </div>
+  <% end %>
+</div>
+  <% end %>
+<% end %>
+<%= calendar_for(@tasks, :year => @date.year, :month => @date.month) do |calendar| %>
+  <%= calendar.head('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun') %>
+  <%= calendar.day(:day_method => :due_date) do |date, tasks| %>
+  <div class="day_block">
+    <%= date.day %>
+  <% tasks.each do |task| %>
+  <div class="task_card">
+  <%= link_to task.type, task_path(task) %>
+  </div>
+  <% end %>
+</div>
+  <% end %>
+<% end %>
+</div>
+
 <!-- </div> -->
 
 <script>
@@ -33,7 +65,12 @@ $(document).ready(function () {
     horizonOffset: -50,
     horizonOffsetMultiplier: .7,
     separation: 250,
-    edgeFadeEnabled: true
+    edgeFadeEnabled: true,
+    selector: 'table',
+    preloadImages: false,
+    clickedCenter: function(element) {
+      window.location.href=element.children('a').attr('href');
+    }
   });
 });
 

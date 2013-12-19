@@ -5,10 +5,18 @@
  			
 			<a href="#" class="button index popover" id="all_apps" title="All Apps">
 				<div class="contents" style="display:none;">
-					<ul>
-						<li>App1</li>
-						<li>App2</li>
-						<li>App3</li>
+					
+					<ul class="app_nav">
+						<li>Workflow</li>
+						<li>Resources</li>
+						<li>Spike</li>
+						<li>Account Files</li>
+						<li>Request</li>
+						<li>Useful Links</li>
+						<li>Jumpship</li>
+						<li>Engineer</li>
+						<li>evolve</li>	
+
 					</ul>
 
 				</div>
@@ -27,12 +35,9 @@
 				<span class="icon-gridicon"></span>
 			</a> 
 
-			<a href="<%= new_task_path %>" class="button index" id="new_task" title="Add Task" >
-				<div class="contents" style="display:none;">
-					<form> Task: <input type="text" name="Add Task"></form>
-					<p>Date: <input type="text" id="datepicker"></p>
-					<button>Add Task</button>
-				</div>
+			<a class="button index" id="new_task" title="Add Task" href="<%= new_task_path %>">
+
+			
 				<span class="new-task"></span>
 			</a> 
 			

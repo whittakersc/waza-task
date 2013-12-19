@@ -33,9 +33,13 @@ class TasksController < ApplicationController
   end
 
   def issues
+    @tasks = Task.current_month
+    @date = Date.today
   end
 
   def calendar
+    @tasks = Task.current_month
+    @date = Date.today
   end
 
   def show
