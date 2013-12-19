@@ -40,8 +40,9 @@
 .sidebar a {
 	margin: 0 auto;
 	z-index: 400;
-	margin-bottom: 30px;
+	
 }
+
 
 .sidebar .button span {	
 	width: 48px;
@@ -50,6 +51,7 @@
 	vertical-align: middle;
 	padding:5px 5px 5px 5px;
 	background-position: center;
+	margin-bottom: 10px;
 }
 
 /*.icon-caricon {
@@ -82,26 +84,151 @@
 	background-position: center;
 }
 
-.completed-to-dos {
-	background: url(completed.png) no-repeat;
+#spike {
+	background: url(spike_grey.png) no-repeat; 
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
 }
 
-.all-to-dos {
-	background: url(alltodos.png) no-repeat;
+#spike:hover {
+	background: url(spike_pink.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
 }
 
-.in-progress {
-	background: url(inprogress.png) no-repeat;
+
+#completed-to-dos {
+	background: url(complete_grey.png) no-repeat; 
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
+}
+
+#completed-to-dos:hover {
+	background: url(complete_pink.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
 }
 
 
-.new-task {
-	background: url(addtask.png) no-repeat;
+#all-to-dos {
+	background: url(all_grey.png) no-repeat; 
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
 }
 
-.chat {
-	background: url(chat.png) no-repeat;
+#all-to-dos:hover {
+	background: url(all_pink.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
 }
+
+#add_event {
+	background: url(event_grey.png) no-repeat; 
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
+}
+
+#add_event:hover {
+	background: url(event_pink.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
+}
+
+#cross {
+	background: url(add_grey.png) no-repeat; 
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
+}
+
+#cross:hover {
+	background: url(add_pink.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
+}
+
+#chat {
+	background: url(chat_grey.png) no-repeat; 
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
+}
+
+#chat:hover {
+	background: url(chat_pink.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
+}
+
+#in_progress {
+	background: url(progress_grey.png) no-repeat; 
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
+}
+
+#in_progress:hover {
+	background: url(progress_pink.png) no-repeat;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	vertical-align: middle;
+	padding:5px 5px 5px 5px;
+	background-position: center;
+}
+
+
+
+
 
 .sidebar .button span:hover {
 	width: 48px;
@@ -113,15 +240,6 @@
 
 
 
-.completed-to-dos:hover {
-	background: url(completed.png) no-repeat;
-}
-.all-to-dos:hover {
-	background: url(alltodos_white.png) no-repeat;
-}
 
-.in-progress:hover {
-	background: url(inprogress_white.png) no-repeat;
-}
 
 
