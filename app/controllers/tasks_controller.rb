@@ -39,8 +39,8 @@ class TasksController < ApplicationController
   end
 
   def calendar
-    @tasks = Task.current_month
     @date = Date.today
+    @calendar_views = [Task.current_month, Task.previous_month, Task.current_month, Task.previous_month]
   end
 
   def show
